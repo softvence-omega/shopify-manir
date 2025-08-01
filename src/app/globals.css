@@ -8,7 +8,7 @@
 }
 body {
   background: #001605;
-
+  scroll-behavior: smooth;
   color: #fff;
   font-family: var(--font-space-grotesk, sans-serif);
 }
@@ -16,4 +16,7 @@ body {
   --font-grotesk: "Space Grotesk", sans-serif;
   --font-urbanist: "Urbanist", sans-serif;
   --color-primary: #42c822;
+}
+* {
+  user-select: none;
 }
