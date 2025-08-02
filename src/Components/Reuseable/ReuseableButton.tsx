@@ -36,7 +36,7 @@ export default function ReuseableButton({
 }: ReusableButtonProps) {
   return (
     <motion.button
-      className={` ${className} flex items-center border border-[#42c822] w-full md:w-fit cursor-pointer rounded-2xl px-6 py-3 text-[#42c822] font-medium text-xl   gap-4 hover:bg-gradient-to-r from-[#42c822] to-[#2A512B] hover:text-white`}
+      className={` ${className} flex items-center border border-[#42c822] w-full md:w-fit cursor-pointer rounded-2xl px-6 py-3 text-[#42c822] font-medium text-lg   gap-4 hover:bg-gradient-to-r from-[#42c822] to-[#2A512B] hover:text-white`}
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}

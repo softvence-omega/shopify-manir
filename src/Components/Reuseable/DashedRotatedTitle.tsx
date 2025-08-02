@@ -12,7 +12,7 @@ const DashedRotatedTitle: React.FC<DashedRotatedTextProps> = ({
   return (
     <div className="inline-block relative align-middle">
       <div
-        className={`relative border-2 border-dashed border-[#42C822] px-3 py-1 my-4 text-[#42C822] font-extrabold text-3xl md:text-[32px] inline-block  mr-6 ${className}`}
+        className={`relative border-2 border-dashed border-[#42C822] px-3 py-2 my-2 text-[#42C822] font-extrabold text-3xl md:text-[32px] inline-block  mr-6 ${className}`}
         style={{
           transform: "rotate(-1deg)",
           display: "inline-block",

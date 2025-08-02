@@ -1,5 +1,8 @@
 import Image from "next/image";
-
+import Link from "next/link";
+import img from "../../../public/images/about.png";
+import bg from "../../../public/images/bg.svg";
+import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
 const FiverrSVG = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -29,33 +32,26 @@ const FiverrSVG = () => (
 export default function AboutUsSection() {
   return (
     <section
-      className="w-full py-12 md:py-24 flex justify-center items-center min-h-screen"
+      id="about"
+      className="w-full mt-20 md:my-40 flex justify-center items-center "
       style={{
-        background: "linear-gradient(180deg, #42c822 0%, #2A512B 100%)",
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="max-w-7xl w-full mx-auto px-2 sm:px-4 md:px-8">
-        <div className="relative bg-[rgba(0,15,6,0.2)] backdrop-blur-lg rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col md:flex-row items-center gap-12 md:gap-0 shadow-xl overflow-hidden">
-          {/* Left side */}
-          <div className="flex-1">
-            {/* Dashed "About Us" Label */}
-            <div
-              className="inline-block mb-4"
-              style={{
-                transform: "rotate(-1deg)",
-              }}
-            >
-              <span className="border-2 border-dashed border-[#42C822] text-[#42C822] px-4 py-1 rounded-lg text-xl font-semibold select-none">
-                About Us
-              </span>
-            </div>
-            {/* Heading */}
-            <h2 className="text-[2rem] md:text-[2.7rem] font-bold leading-tight text-white mt-2 mb-4">
+      <div className="max-w-[1400px] w-full mx-auto ">
+        <div className="relative bg-[rgba(0,15,6,0.2)] backdrop-blur-lg rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col md:flex-row items-center gap-12 md:gap-10 shadow-xl overflow-hidden">
+          <div className="flex-1 max-w-[480px]">
+            <DashedRotatedTitle title="About Us" />
+
+            <h2 className="text-[2rem] md:text-[2.7rem] font-bold leading-tight text-primary mt-8 mb-4">
               Innovating the Future <br className="hidden md:block" />
-              <span className="text-[#42C822]">with Manir</span>
+              with Manir
             </h2>
-            {/* Paragraph */}
-            <p className="text-[#B9EEC9] max-w-[480px] mb-4 leading-relaxed text-base md:text-lg">
+
+            <p className="text-white  mb-4 leading-relaxed text-base md:text-lg">
               We specialize in creating innovative digital solutions that
               transform businesses. Our team of experts seamlessly blends
               creativity with technical excellence to deliver outstanding
@@ -64,42 +60,59 @@ export default function AboutUsSection() {
               <br />
               We offer a comprehensive range of services, including website
               development, WordPress expertise, Wix website, and Shopify store
-              design.{" "}
-              <a href="#" className="text-[#42C822] underline ml-2">
+              design.
+              <Link href="#" className="text-[#42C822] underline ml-2">
                 Learn More
-              </a>
+              </Link>
             </p>
           </div>
 
-          {/* Right side: Card with image, svg, play btn */}
           <div className="relative flex-1 w-full flex justify-center">
-            <div className="relative w-full max-w-[430px] min-w-[300px] h-[310px] bg-[rgba(0,15,6,0.5)] rounded-[32px] border border-[#42C822] overflow-hidden shadow-xl flex items-center justify-center">
-              {/* Fiverr SVG */}
-              <div className="absolute top-7 left-7 z-10">
+            <div className="relative w-full h-[550px]   bg-[rgba(0,15,6,0.5)] rounded-[32px]  overflow-hidden shadow-xl flex items-center justify-center">
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(0deg, rgba(7,34,8,0.5) 0%, rgba(7,34,8,0.5) 100%)",
+                }}
+              />
+              <div className="absolute top-10 left-10 z-10">
                 <FiverrSVG />
               </div>
 
-              {/* User/Video Image */}
               <Image
-                src="/images/profile-about-demo.jpg" // Your uploaded image path or placeholder
+                src={img}
                 alt="manir-about"
                 fill
-                className="object-cover rounded-[32px] brightness-90"
+                className="object-cover rounded-[32px] brightness-90 h-full w-full"
+                quality={100}
+                layout="fill"
+              />
+              <div
+                className="absolute inset-0 pointer-events-none"
                 style={{
-                  filter: "blur(0px)", // Remove blur for the person image, use for bg as needed
+                  background:
+                    "linear-gradient(0deg, rgba(7,34,8,0.5) 0%, rgba(7,34,8,0.5) 100%)",
                 }}
               />
-              {/* Play button (centered) */}
               <button
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#42C822] p-4 rounded-full shadow-lg hover:scale-105 transition-transform"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#42C822] p-3  cursor-pointer rounded-full shadow-lg hover:scale-105 transition-transform"
                 style={{
                   boxShadow: "0 8px 32px 0 rgba(66,200,34,0.12)",
                 }}
               >
-                {/* Play Icon */}
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <circle cx="16" cy="16" r="16" fill="#42C822" />
-                  <polygon points="12,10 22,16 12,22" fill="white" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="22"
+                  viewBox="0 0 19 22"
+                  fill="none"
+                >
+                  <path
+                    d="M16.917 9.98926C17.6947 10.4383 17.6947 11.5617 16.917 12.0107L2.91699 20.0937C2.13924 20.5428 1.16707 19.981 1.16699 19.083L1.16699 2.91699C1.16707 2.01895 2.13924 1.45722 2.91699 1.90625L16.917 9.98926Z"
+                    stroke="white"
+                    strokeWidth="2.33333"
+                  />
                 </svg>
               </button>
             </div>
