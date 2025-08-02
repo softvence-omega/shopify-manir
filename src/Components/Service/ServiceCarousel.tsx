@@ -58,7 +58,7 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
     <div className="relative w-full mx-auto mt-6 md:mt-12 flex items-center">
       <button
         onClick={() => instanceRef.current?.prev()}
-        className="absolute cursor-pointer left-0 top-2/3 md:top-0 md:-left-20 z-10 p-2 rounded-full bg-[#42c822] transition disabled:opacity-30"
+        className="absolute cursor-pointer left-0 top-2/3 md:top-1/2 md:-left-20 z-10 p-2 rounded-full bg-[#42c822] transition disabled:opacity-30"
         aria-label="Previous"
         disabled={disablePrev}
       >
@@ -78,7 +78,7 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
 
       <button
         onClick={() => instanceRef.current?.next()}
-        className="absolute cursor-pointer right-0 top-2/3 md:top-0 md:-right-20  z-10 p-2 rounded-full bg-[#42c822] transition disabled:opacity-30"
+        className="absolute cursor-pointer right-0 top-2/3 md:top-1/2 md:-right-20  z-10 p-2 rounded-full bg-[#42c822] transition disabled:opacity-30"
         aria-label="Next"
         disabled={disableNext}
       >
