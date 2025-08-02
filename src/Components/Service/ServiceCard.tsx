@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import ReuseableButton from "../Reuseable/ReuseableButton";
 
 interface ServiceCardProps {
-  image: string;
+  image: StaticImageData;
 
   rating: number;
   subtitle?: string;
@@ -27,8 +27,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
       <div className="text-lg p-4 ">{subtitle}</div>
     </div>
-    <div className="flex p-4 items-center justify-between w-full ">
-      <div className="flex items-center gap-1font-bold">
+    <div className="flex p-4 md:items-center justify-between w-full  flex-col md:flex-row gap-4">
+      <div className="flex  items-center gap-1font-bold">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="22"

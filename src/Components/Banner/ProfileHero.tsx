@@ -70,7 +70,7 @@ const ProfileHero = () => {
             </svg>
           ))}
         </div>
-        <span className="ml-3 text-white/60 text-base">
+        <span className="ml-3 text-white/60  text-sm md:text-base">
           - Click to see 383 Review
         </span>
       </div>

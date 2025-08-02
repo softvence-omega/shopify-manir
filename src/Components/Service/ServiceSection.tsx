@@ -62,7 +62,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="mt-20 md:my-40 ">
+    <section className="my-32 md:my-40 ">
       <div className="text-center">
         <DashedRotatedTitle title="Our Services" />
         <h2 className="text-[2rem] md:text-[2.7rem] font-bold leading-tight text-primary  mt-8 mb-4">

@@ -33,7 +33,7 @@ export default function AboutUsSection() {
   return (
     <section
       id="about"
-      className="w-full mt-20 md:my-40 flex justify-center items-center "
+      className="w-full my-32 md:my-40 flex justify-center items-center "
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -43,15 +43,17 @@ export default function AboutUsSection() {
     >
       <div className="max-w-[1400px] w-full mx-auto ">
         <div className="relative bg-[rgba(0,15,6,0.2)] backdrop-blur-lg rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col md:flex-row items-center gap-12 md:gap-10 shadow-xl overflow-hidden">
-          <div className="flex-1 max-w-[480px]">
-            <DashedRotatedTitle title="About Us" />
+          <div className="flex-1  max-w-[480px]">
+            <div className="grid md:block place-items-center">
+              <DashedRotatedTitle title="About Us" />
+            </div>
 
-            <h2 className="text-[2rem] md:text-[2.7rem] font-bold leading-tight text-primary mt-8 mb-4">
+            <h2 className="text-[2rem] md:text-[2.7rem] font-bold leading-tight text-primary mt-8 mb-4 text-center md:text-start">
               Innovating the Future <br className="hidden md:block" />
               with Manir
             </h2>
 
-            <p className="text-white  mb-4 leading-relaxed text-base md:text-lg">
+            <p className="text-white  mb-4 leading-relaxed text-base md:text-lg text-center md:text-start">
               We specialize in creating innovative digital solutions that
               transform businesses. Our team of experts seamlessly blends
               creativity with technical excellence to deliver outstanding
