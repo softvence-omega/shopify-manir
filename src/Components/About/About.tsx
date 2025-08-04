@@ -1,8 +1,12 @@
+"use client";
+import { motion, useAnimation, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import img from "../../../public/images/about.png";
 import bg from "../../../public/images/bg.svg";
 import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
+
 const FiverrSVG = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +15,7 @@ const FiverrSVG = () => (
     viewBox="0 0 106 32"
     fill="none"
   >
-    <g clipPath="url(#clip0_156_509)">
+    <g clip-path="url(#clip0_156_509)">
       <path
         d="M96.8226 15.3386H93.0863C90.6811 15.3386 89.3925 17.1484 89.3925 20.1642V31.0665H82.3063V15.3375H79.2992C76.894 15.3375 75.6064 17.1473 75.6064 20.1631V31.0654H68.5191V9.52115H75.6064V12.7962C76.7666 10.2538 78.3556 9.52115 80.7184 9.52115H89.3936V12.7962C90.5538 10.2538 92.1427 9.52115 94.5055 9.52115H96.8237L96.8226 15.3386ZM66.9726 21.974H52.1983C52.5847 24.3874 54.0877 25.7663 56.6214 25.7663C58.5107 25.7663 59.8429 24.9899 60.2728 23.6121L66.5427 25.3781C64.9973 29.1266 61.1739 31.4109 56.6214 31.4109C48.9333 31.4109 45.4114 25.4207 45.4114 20.2944C45.4114 15.2533 48.5034 9.22044 56.1915 9.22044C64.3519 9.22044 67.0575 15.3386 67.0575 19.8635C67.0629 20.568 67.0345 21.2723 66.9726 21.974ZM60.1008 17.7946C59.9288 15.9411 58.5967 14.2189 56.1926 14.2189C53.9582 14.2189 52.6282 15.2085 52.1983 17.7946H60.1008ZM33.0435 31.0654H39.2699L47.0439 9.52334H39.9153L36.1355 22.0604L32.2697 9.52225H25.1824L33.0435 31.0654ZM4.00973 31.0654H11.0535V15.3386H17.7555V31.0665H24.7557V9.52225H11.0535V8.18707C11.0535 6.72178 12.0842 5.81745 13.7167 5.81745H17.7544V0H12.5576C7.44563 0 4.00973 3.14601 4.00973 7.75514V9.52225H0.0155029V15.3397H4.00973V31.0654Z"
         fill="white"
@@ -30,6 +34,19 @@ const FiverrSVG = () => (
 );
 
 export default function AboutUsSection() {
+  const ref = useRef(null);
+
+  const controls = useAnimation();
+
+  const isInView = useInView(ref, { margin: "-100px 0px", once: false });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
   return (
     <section
       id="about"
@@ -41,9 +58,34 @@ export default function AboutUsSection() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="max-w-[1400px] w-full mx-auto ">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={{
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.9, ease: "easeOut" },
+          },
+          hidden: { opacity: 0, y: 70 },
+        }}
+        className="max-w-[1400px] w-full mx-auto "
+      >
         <div className="relative bg-[rgba(0,15,6,0.2)] backdrop-blur-lg rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col md:flex-row items-center gap-12 md:gap-10 shadow-xl overflow-hidden">
-          <div className="flex-1  max-w-[480px]">
+          <motion.div
+            className="flex-1  max-w-[480px]"
+            initial={{ opacity: 0, x: -80 }}
+            animate={controls}
+            variants={{
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.2, duration: 0.8 },
+              },
+              hidden: { opacity: 0, x: -80 },
+            }}
+          >
             <div className="grid md:block place-items-center">
               <DashedRotatedTitle title="About Us" />
             </div>
@@ -67,7 +109,7 @@ export default function AboutUsSection() {
                 Learn More
               </Link>
             </p>
-          </div>
+          </motion.div>
 
           <div className="relative flex-1 w-full flex justify-center">
             <div className="relative w-full h-[550px]   bg-[rgba(0,15,6,0.5)] rounded-[32px]  overflow-hidden shadow-xl flex items-center justify-center">
@@ -120,7 +162,7 @@ export default function AboutUsSection() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

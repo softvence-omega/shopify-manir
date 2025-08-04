@@ -149,7 +149,7 @@ const MorphingNavigation: React.FC<{
                   className={classNames(
                     "fixed top-0 left-0 right-0 z-50 bg-[rgba(0,15,6,0.32)] backdrop-blur-[8px] webkit-backdrop-blur-[8px] transition-all",
 
-                    isSticky && "max-w-[1400px] mx-auto lg:rounded-xl"
+                    isSticky && "max-w-[1400px] mx-auto lg:rounded-xl mt-4"
                   )}
                   style={{
                     boxShadow: isSticky

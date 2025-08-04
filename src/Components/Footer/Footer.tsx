@@ -1,0 +1,140 @@
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import logo from "../../../public/favicon.svg";
+import ReuseableButton from "../Reuseable/ReuseableButton";
+import Wrapper from "../Reuseable/Wrapper";
+
+const footerLinks = [
+  "Shopify Theme",
+  "Product Research",
+  "Logo Branding",
+  "SEO",
+  "Store Build",
+  "WordPress theme development",
+  "Web Design",
+  "Wix",
+  "Webflow",
+];
+
+export default function Footer() {
+  return (
+    <footer className="relative overflow-hidden">
+      <Wrapper>
+        <div className="relative z-10   mt-40 mb-20">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold mb-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Interested to collaborate?
+            </motion.h2>
+            <motion.p
+              className="text-3xl md:text-5xl font-bold mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              Let`s connect.
+            </motion.p>
+
+            <motion.div
+              className="mt-6 md:mt-16 grid place-items-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <ReuseableButton
+                title=" Visit Our Fiverr Profile to Collaborate"
+                showArrow
+              />
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <motion.div
+              className="flex items-center justify-center "
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <div className="w-[160px] h-[48px] mt-20 md:mt-36">
+                <Link href="/" className="block w-full h-full">
+                  <Image
+                    src={logo}
+                    alt="logo"
+                    quality={100}
+                    className="object-contain w-full h-full"
+                  />
+                </Link>
+              </div>
+            </motion.div>
+
+            <motion.p
+              className="  mt-8 max-w-2xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+            >
+              Hi there, I am Manir, a Full Stack web developer with 5+ years
+              knowledge of both
+              <br />
+              theory, Shopify, WordPress, Wix, Webflow, and all e-commerce
+              platforms.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            style={{
+              borderRadius: "24px",
+              background: " rgba(0, 0, 0, 0.30)",
+              backdropFilter: "blur(6px)",
+            }}
+            className="flex flex-col md:flex-wrap md:flex-row justify-center items-center gap-4 md:gap-10 p-6 mt-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            {footerLinks.map((link, index) => (
+              <motion.p
+                key={index}
+                className="text-gray-300 hover:text-green-400 transition-colors cursor-pointer duration-200 font-medium"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.9 + index * 0.05 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.8 }}
+              >
+                {link}
+              </motion.p>
+            ))}
+          </motion.div>
+        </div>
+      </Wrapper>
+      <div
+        className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-0 z-0"
+        style={{
+          width: "100dvw",
+          height: "100px",
+          borderRadius: "1791px",
+          background: "rgba(66, 200, 34, 0.32)",
+          filter: "blur(50px)",
+          maxWidth: 1600,
+        }}
+      />
+    </footer>
+  );
+}

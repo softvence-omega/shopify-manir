@@ -15,7 +15,7 @@ export default function PortfolioSection() {
         <h2 className="text-5xl  font-bold text-[#42c822] mt-8 mb-4">
           A Showcase of Innovation
         </h2>
-        <p className="max-w-3xl  mx-auto text-sm md:text-lg leading-relaxed">
+        <p className="max-w-3xl  mx-auto text-sm md:text-base leading-relaxed">
           Discover our portfolio showcasing our finest work, from innovative
           solutions to remarkable achievements. Explore diverse projects and
           exceptional results that bring visions to life.

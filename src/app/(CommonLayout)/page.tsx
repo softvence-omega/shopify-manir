@@ -4,16 +4,18 @@ import PortfolioSection from "@/Components/Portfolio/PorfolioSection";
 import Wrapper from "@/Components/Reuseable/Wrapper";
 import ServicesSection from "@/Components/Service/ServiceSection";
 import MeetOurTeamSection from "@/Components/Team/MeetOutTeam";
+import TestimonialsSection from "@/Components/Testimonial/Testimonial";
 
 export default function Home() {
   return (
-    <div className="min-h-[200dvh] ">
+    <div className="">
       <Banner />
       <Wrapper>
         <AboutUsSection />
         <MeetOurTeamSection />
         <ServicesSection />
         <PortfolioSection />
+        <TestimonialsSection />
       </Wrapper>
     </div>
   );
