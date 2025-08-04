@@ -3,14 +3,14 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, TargetAndTransition } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
 
 export interface TeamMember {
   id: string;
   name: string;
   role: string;
-  image: string;
+  image: StaticImageData;
   bio?: string;
 }
 

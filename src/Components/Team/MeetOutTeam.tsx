@@ -1,3 +1,9 @@
+import { StaticImageData } from "next/image";
+import img2 from "../../../public/images/team/hasan.png";
+import img4 from "../../../public/images/team/iftekhar.png";
+import img5 from "../../../public/images/team/imran.png";
+import img3 from "../../../public/images/team/lulfur.png";
+import img1 from "../../../public/images/team/manir.png";
 import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
 import TeamCarousel from "./TeamCarousel";
 
@@ -5,39 +11,39 @@ type TeamMember = {
   id: string;
   name: string;
   role: string;
-  image: string;
+  image: StaticImageData;
 };
 const teamMembers: TeamMember[] = [
   {
     id: "3",
     name: "Manir Uzzaman",
     role: "CEO at Shopify Manir",
-    image: "/images/team/manir.png",
+    image: img1,
   },
   {
     id: "1",
     name: "Hasan Ahmed",
     role: "Google Ads Expert",
-    image: "/images/team/hasan.png",
+    image: img2,
   },
   {
     id: "2",
     name: "Lulfur Anik",
     role: "Shopify Expert",
-    image: "/images/team/lulfur.png",
+    image: img3,
   },
 
   {
     id: "4",
     name: "Iftakhar Hossain Akash",
     role: "Project Manager",
-    image: "/images/team/iftekhar.png",
+    image: img4,
   },
   {
     id: "5",
     name: "Imran Hossain",
     role: "MERN Stack Developer",
-    image: "/images/team/imran.png",
+    image: img5,
   },
 ];
 
