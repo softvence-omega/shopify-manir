@@ -1,11 +1,11 @@
-import img2 from "../../../public/images/portfolio/img1.jpg";
-import img3 from "../../../public/images/portfolio/img2.jpg";
-import img1 from "../../../public/images/portfolio/img3.jpg";
-import img6 from "../../../public/images/portfolio/img5.jpg";
-import img from "../../../public/images/portfolio/tall1.jpg";
-import img7 from "../../../public/images/portfolio/tall2.jpg";
+import img3 from "../../../public/images/portfolio/4.png";
+import img from "../../../public/images/portfolio/p1.png";
+import img2 from "../../../public/images/portfolio/p2.png";
+import img1 from "../../../public/images/portfolio/p3.png";
+import img6 from "../../../public/images/portfolio/p5.png";
+import img7 from "../../../public/images/portfolio/p7.png";
 import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
-import { PortfolioImage } from "./ReuseableImage";
+import PortfolioImage from "./ReuseableImage";
 
 export default function PortfolioSection() {
   return (

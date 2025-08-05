@@ -52,10 +52,12 @@ export default function Footer() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <ReuseableButton
-                title=" Visit Our Fiverr Profile to Collaborate"
-                showArrow
-              />
+              <Link href="https://www.fiverr.com/shopify_manir">
+                <ReuseableButton
+                  title=" Visit Our Fiverr Profile to Collaborate"
+                  showArrow
+                />
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -72,7 +74,10 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <div className="w-[160px] h-[48px] mt-20 md:mt-36">
-                <Link href="/" className="block w-full h-full">
+                <Link
+                  href="https://www.fiverr.com/shopify_manir"
+                  className="block w-full h-full"
+                >
                   <Image
                     src={logo}
                     alt="logo"
@@ -96,17 +101,18 @@ export default function Footer() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             {footerLinks.map((link, index) => (
-              <motion.p
-                key={index}
-                className="text-gray-300 hover:text-green-400 transition-colors cursor-pointer duration-200 font-medium"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.9 + index * 0.05 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.8 }}
-              >
-                {link}
-              </motion.p>
+              <Link key={index} href="https://www.fiverr.com/shopify_manir">
+                <motion.p
+                  className="text-gray-300 hover:text-green-400 transition-colors cursor-pointer duration-200 font-medium"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.9 + index * 0.05 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.8 }}
+                >
+                  {link}
+                </motion.p>
+              </Link>
             ))}
           </motion.div>
         </div>

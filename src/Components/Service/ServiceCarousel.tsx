@@ -9,7 +9,7 @@ import ServiceCard from "./ServiceCard";
 interface Service {
   id: string;
   image: StaticImageData;
-
+  href: string;
   rating: number;
   subtitle?: string;
 }

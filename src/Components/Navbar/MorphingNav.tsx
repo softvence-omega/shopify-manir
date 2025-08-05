@@ -59,14 +59,19 @@ const MorphingNavigation: React.FC<{
         )}
         style={{ minHeight: 80 }}
       >
-        <Link href="/" className="flex items-center gap-2">
+        <Link
+          href="https://www.fiverr.com/shopify_manir"
+          className="flex items-center gap-2"
+        >
           <div className="w-[160px] h-[40px]">
             <Image src={logo} alt="logo" quality={100} />
           </div>
         </Link>
         <div className="flex items-center gap-4">
           <div className="hidden lg:block">
-            <ReuseableButton title="GET A QUOTE" />
+            <Link href="https://www.fiverr.com/shopify_manir">
+              <ReuseableButton title="GET A QUOTE" />
+            </Link>
           </div>
           <button
             onClick={toggleMenu}
@@ -128,7 +133,10 @@ const MorphingNavigation: React.FC<{
               </motion.button>
 
               <div className="w-[160px] h-[48px] mb-12">
-                <Link href="/" className="block w-full h-full">
+                <Link
+                  href="https://www.fiverr.com/shopify_manir"
+                  className="block w-full h-full"
+                >
                   <Image
                     src={logo}
                     alt="logo"

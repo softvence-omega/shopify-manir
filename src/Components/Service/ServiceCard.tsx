@@ -1,16 +1,17 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import ReuseableButton from "../Reuseable/ReuseableButton";
 
 interface ServiceCardProps {
   image: StaticImageData;
-
+  href: string;
   rating: number;
   subtitle?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
   image,
-
+  href,
   rating,
   subtitle,
 }) => (
@@ -43,7 +44,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </svg>
         <span className="ml-2">{rating} / 5</span>
       </div>
-      <ReuseableButton title="View Now !" showArrow />
+      <Link href={href}>
+        <ReuseableButton title="View Now !" showArrow />
+      </Link>
     </div>
   </div>
 );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CountUp from "react-countup";
 import ReuseableButton from "../Reuseable/ReuseableButton";
 
@@ -73,8 +74,9 @@ const ProfileHero = () => {
           - Click to see 383 Review
         </span>
       </div>
-
-      <ReuseableButton title="Fiverr Profile" showArrow={true} />
+      <Link href="https://www.fiverr.com/shopify_manir">
+        <ReuseableButton title="Fiverr Profile" showArrow={true} />
+      </Link>
     </section>
   );
 };

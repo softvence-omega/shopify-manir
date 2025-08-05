@@ -71,6 +71,7 @@ const TestimonialCard = ({
 }: TestimonialCardProps) => {
   return (
     <motion.div
+      id={`testimonial-${testimonial.id}`}
       className={`relative p-6 rounded-xl border transition-all duration-300 cursor-pointer ${
         isHovered
           ? "bg-[#090909] border-[#1C540E] shadow shadow-[#1C540E]"
@@ -85,14 +86,14 @@ const TestimonialCard = ({
       transition={{ duration: 0.3 }}
     >
       <div className="flex items-center justify-between mb-4 border-b border-[#1C540E] pb-4">
-        <div className="flex items-center gap-3 ">
+        <div className="flex items-center gap-3">
           <Image
             height={480}
             width={480}
             quality={100}
             src={testimonial.avatar}
             alt={testimonial.clientName}
-            className="w-12 h-12 rounded-full object-cover "
+            className="w-12 h-12 rounded-full object-cover"
           />
           <span className="text-lg md:text-2xl text-primary font-medium">
             {testimonial.clientName}
@@ -103,18 +104,18 @@ const TestimonialCard = ({
         </div>
       </div>
 
-      <div className="flex items-center gap-2 mb-4 ">
+      <div className="flex items-center gap-2 mb-4">
         <div className="flex gap-1">
           {[...Array(5)].map((_, i) => (
             <StarIcon key={i} filled={i < Math.floor(testimonial.rating)} />
           ))}
         </div>
-        <span className="font-medium ">
+        <span className="font-medium">
           {testimonial.rating}/{testimonial.maxRating}
         </span>
       </div>
 
-      <p className=" leading-relaxed  mb-4">{testimonial.review}</p>
+      <p className="leading-relaxed mb-4">{testimonial.review}</p>
 
       <div className="flex justify-between items-center text-xs text-gray-500">
         <span>{testimonial.service}</span>
@@ -123,4 +124,5 @@ const TestimonialCard = ({
     </motion.div>
   );
 };
+
 export default TestimonialCard;
