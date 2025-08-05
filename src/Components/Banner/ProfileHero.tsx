@@ -1,6 +1,5 @@
-"use client";
 import CountUp from "react-countup";
-import ReusableButton from "../Reuseable/ReuseableButton";
+import ReuseableButton from "../Reuseable/ReuseableButton";
 
 const ProfileHero = () => {
   return (
@@ -18,8 +17,8 @@ const ProfileHero = () => {
 
       <div className="flex flex-wrap items-center justify-between mb-8 border-b border-[#2A512B] pb-6 gap-10 md:gap-0">
         <div className="flex gap-2 items-center">
-          <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none ">
-            <CountUp end={5} duration={6} suffix="+" />
+          <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none w-20 text-center">
+            <CountUp end={5} duration={8} suffix="+" />
           </span>
           <span className="text-xs md:text-sm  mt-1">
             Years
@@ -29,8 +28,8 @@ const ProfileHero = () => {
         </div>
         <div className="border-r border-[#2A512B] h-8 mx-3 md:mx-5" />
         <div className="flex gap-2 items-center">
-          <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none ">
-            <CountUp end={155} duration={3} suffix="+" />
+          <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none w-20 text-center">
+            <CountUp end={155} duration={6} suffix="+" />
           </span>
           <span className="text-xs md:text-sm  mt-1">
             Project
@@ -40,8 +39,8 @@ const ProfileHero = () => {
         </div>
         <div className="border-r border-[#2A512B] h-8 mx-3 sm:mx-5" />
         <div className="flex gap-2 items-center">
-          <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none ">
-            <CountUp end={10} duration={6} suffix="+" />
+          <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none w-20 text-center">
+            <CountUp end={10} duration={8} suffix="+" />
           </span>
 
           <span className="text-xs sm:text-sm  mt-1">
@@ -75,7 +74,7 @@ const ProfileHero = () => {
         </span>
       </div>
 
-      <ReusableButton title="Fiverr Profile" showArrow={true} />
+      <ReuseableButton title="Fiverr Profile" showArrow={true} />
     </section>
   );
 };

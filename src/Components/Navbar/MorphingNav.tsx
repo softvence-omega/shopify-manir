@@ -39,7 +39,56 @@ const MorphingNavigation: React.FC<{
   }, []);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const morphingNavbar = (
+    <motion.header
+      className={classNames(
+        "fixed top-0 left-0 right-0 z-50 bg-[rgba(0,15,6,0.32)] backdrop-blur-[8px] webkit-backdrop-blur-[8px] transition-all",
 
+        isSticky && "max-w-[1400px] mx-auto lg:rounded-xl md:mt-4"
+      )}
+      style={{
+        boxShadow: isSticky ? "0 8px 32px 0 rgba(0,0,0,0.18)" : undefined,
+        minHeight: 80,
+      }}
+    >
+      <div
+        className={classNames(
+          "flex items-center justify-between w-full",
+          "px-4 md:px-6 py-4",
+          "lg:max-w-[1400px] lg:mx-auto lg:px-10"
+        )}
+        style={{ minHeight: 80 }}
+      >
+        <Link href="/" className="flex items-center gap-2">
+          <div className="w-[160px] h-[40px]">
+            <Image src={logo} alt="logo" quality={100} />
+          </div>
+        </Link>
+        <div className="flex items-center gap-4">
+          <div className="hidden lg:block">
+            <ReuseableButton title="GET A QUOTE" />
+          </div>
+          <button
+            onClick={toggleMenu}
+            className="ml-2 flex items-center justify-center w-12 h-12 rounded-full bg-[#6ee42b] cursor-pointer hover:bg-[#42c822] transition-all duration-200"
+            aria-label="Open menu"
+          >
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="mx-auto"
+            >
+              <rect x="5" y="7" width="14" height="2" rx="1" fill="#fff" />
+              <rect x="5" y="11" width="14" height="2" rx="1" fill="#fff" />
+              <rect x="5" y="15" width="14" height="2" rx="1" fill="#fff" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </motion.header>
+  );
   return (
     <>
       <AnimatePresence>
@@ -125,8 +174,8 @@ const MorphingNavigation: React.FC<{
           margin: isSticky ? "0 auto" : "0",
           paddingTop: isSticky ? 10 : 16,
           paddingBottom: isSticky ? 10 : 16,
-          background: isSticky ? "" : "rgba(0, 15, 6, 0.32)",
-          backdropFilter: isSticky ? "" : "blur(8px)",
+          // background: isSticky ? "" : "rgba(0, 15, 6, 0.32)",
+          // backdropFilter: isSticky ? "" : "blur(8px)",
         }}
       >
         <nav
@@ -144,102 +193,33 @@ const MorphingNavigation: React.FC<{
             })}
           >
             <div className=" flex  items-center justify-center cursor-pointer ">
-              {isSticky ? (
-                <motion.header
-                  className={classNames(
-                    "fixed top-0 left-0 right-0 z-50 bg-[rgba(0,15,6,0.32)] backdrop-blur-[8px] webkit-backdrop-blur-[8px] transition-all",
-
-                    isSticky && "max-w-[1400px] mx-auto lg:rounded-xl mt-4"
-                  )}
-                  style={{
-                    boxShadow: isSticky
-                      ? "0 8px 32px 0 rgba(0,0,0,0.18)"
-                      : undefined,
-                    minHeight: 80,
-                  }}
-                >
-                  <div
-                    className={classNames(
-                      "flex items-center justify-between w-full",
-                      "px-4 md:px-6 py-4",
-                      "lg:max-w-[1400px] lg:mx-auto lg:px-10"
-                    )}
-                    style={{ minHeight: 80 }}
-                  >
-                    <Link href="/" className="flex items-center gap-2">
-                      <div className="w-[160px] h-[40px]">
-                        <Image src={logo} alt="logo" quality={100} />
-                      </div>
-                    </Link>
-                    <div className="flex items-center gap-4">
-                      <div className="hidden lg:block">
-                        <ReuseableButton title="GET A QUOTE" />
-                      </div>
-                      <button
-                        onClick={toggleMenu}
-                        className="ml-2 flex items-center justify-center w-12 h-12 rounded-full bg-[#6ee42b] cursor-pointer hover:bg-[#42c822] transition-all duration-200"
-                        aria-label="Open menu"
-                      >
-                        <svg
-                          width="32"
-                          height="32"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          className="mx-auto"
-                        >
-                          <rect
-                            x="5"
-                            y="7"
-                            width="14"
-                            height="2"
-                            rx="1"
-                            fill="#fff"
-                          />
-                          <rect
-                            x="5"
-                            y="11"
-                            width="14"
-                            height="2"
-                            rx="1"
-                            fill="#fff"
-                          />
-                          <rect
-                            x="5"
-                            y="15"
-                            width="14"
-                            height="2"
-                            rx="1"
-                            fill="#fff"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </motion.header>
-              ) : (
-                <div className="w-[160px] h-[40px]">
-                  <Link href="/">
-                    <Image src={logo} alt="logo" quality={100} />
-                  </Link>
-                </div>
-              )}
+              {/* {isSticky
+                ? morphingNavbar : */}
+              {/* // <div className="w-[160px] h-[40px]">
+                  //   <Link href="/">
+                  //     <Image src={logo} alt="logo" quality={100} />
+                  //   </Link>
+                  // </div> */}
+              {morphingNavbar}
+              {/* } */}
             </div>
           </div>
 
-          {isMobile && !isSticky && (
-            <button
-              onClick={toggleMenu}
-              className="block lg:hidden bg-[rgba(0,15,6,0.9)] cursor-pointer"
-            >
-              <div className="flex flex-col items-center justify-center">
-                <span className="w-5 h-0.5 bg-white mb-1" />
-                <span className="w-5 h-0.5 bg-white mb-1" />
-                <span className="w-5 h-0.5 bg-white" />
-              </div>
-            </button>
-          )}
+          {isMobile &&
+            !isSticky &&
+            //   <button
+            //     onClick={toggleMenu}
+            //     className="block lg:hidden bg-[rgba(0,15,6,0.9)] cursor-pointer"
+            //   >
+            //     <div className="flex flex-col items-center justify-center">
+            //       <span className="w-5 h-0.5 bg-white mb-1" />
+            //       <span className="w-5 h-0.5 bg-white mb-1" />
+            //       <span className="w-5 h-0.5 bg-white" />
+            //     </div>
+            //   </button>
+            morphingNavbar}
 
-          {!isMobile && !isSticky && (
+          {/* {!isMobile && !isSticky && (
             <div className="flex-1 flex justify-center space-x-8">
               {links.map((link) => (
                 <Link key={link.id} href={link.href}>
@@ -253,11 +233,11 @@ const MorphingNavigation: React.FC<{
                 </Link>
               ))}
             </div>
-          )}
+          )} */}
 
-          {!isMobile && !isSticky && (
+          {/* {!isMobile && !isSticky && (
             <ReuseableButton title=" GET A QUOTE"></ReuseableButton>
-          )}
+          )} */}
         </nav>
       </motion.header>
     </>

@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden">
       <Wrapper>
-        <div className="relative z-10   mt-40 mb-20">
+        <div className="relative z-10   mt-40 mb-10">
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -82,19 +82,6 @@ export default function Footer() {
                 </Link>
               </div>
             </motion.div>
-
-            <motion.p
-              className="  mt-8 max-w-2xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-            >
-              Hi there, I am Manir, a Full Stack web developer with 5+ years
-              knowledge of both
-              <br />
-              theory, Shopify, WordPress, Wix, Webflow, and all e-commerce
-              platforms.
-            </motion.p>
           </motion.div>
 
           <motion.div

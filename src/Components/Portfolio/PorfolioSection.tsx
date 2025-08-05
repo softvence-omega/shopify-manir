@@ -9,7 +9,7 @@ import { PortfolioImage } from "./ReuseableImage";
 
 export default function PortfolioSection() {
   return (
-    <section className="w-full my-32 md:my-40  mx-auto">
+    <section id="portfolio" className="w-full my-32 md:my-40  mx-auto">
       <div className="text-center ">
         <DashedRotatedTitle title="Our Portfolio" />
         <h2 className="text-5xl  font-bold text-[#42c822] mt-8 mb-4">
