@@ -114,7 +114,10 @@ export default function TestimonialsSection() {
         transition={{ duration: 0.6, delay: 1 }}
         className="grid place-items-center mt-10"
       >
-        <Link href="https://www.fiverr.com/shopify_manir">
+        <Link
+          href="https://www.fiverr.com/shopify_manir"
+          className="w-full mx-auto md:grid place-items-center"
+        >
           <ReuseableButton title="View Now !" showArrow />
         </Link>
       </motion.div>

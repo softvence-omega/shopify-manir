@@ -95,7 +95,7 @@ const TestimonialCard = ({
             alt={testimonial.clientName}
             className="w-12 h-12 rounded-full object-cover"
           />
-          <span className="text-lg md:text-2xl text-primary font-medium">
+          <span className="text-base md:text-2xl text-primary font-medium">
             {testimonial.clientName}
           </span>
         </div>

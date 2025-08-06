@@ -15,7 +15,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   rating,
   subtitle,
 }) => (
-  <div className=" shadow-lg  w-full h-[450px] flex flex-col items-center justify-between  transition-all   m-2">
+  <div className=" shadow-lg  w-full md:h-[450px] flex flex-col items-center justify-between  transition-all   m-2">
     <div className="w-full   flex flex-col items-center">
       <div className="relative w-full h-[260px] ">
         <Image
