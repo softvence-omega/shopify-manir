@@ -9,13 +9,9 @@ interface ITestimonialsData {
   maxRating: number;
   review: string;
   service: string;
-  date: string;
 }
 interface TestimonialCardProps {
   testimonial: ITestimonialsData;
-  isHovered: boolean;
-  onHover: () => void;
-  onLeave: () => void;
 }
 const StarIcon = ({ filled = true }: { filled?: boolean }) => (
   <svg
@@ -40,7 +36,7 @@ const FiverrLogo = () => (
     viewBox="0 0 106 32"
     fill="none"
   >
-    <g clip-path="url(#clip0_156_674)">
+    <g clipPath="url(#clip0_156_674)">
       <path
         d="M97.2226 15.3386H93.4864C91.0811 15.3386 89.7925 17.1484 89.7925 20.1642V31.0665H82.7063V15.3375H79.6992C77.294 15.3375 76.0065 17.1473 76.0065 20.1631V31.0654H68.9192V9.52115H76.0065V12.7962C77.1666 10.2538 78.7556 9.52115 81.1184 9.52115H89.7936V12.7962C90.9538 10.2538 92.5428 9.52115 94.9056 9.52115H97.2237L97.2226 15.3386ZM67.3726 21.974H52.5984C52.9847 24.3874 54.4877 25.7663 57.0214 25.7663C58.9108 25.7663 60.2429 24.9899 60.6728 23.6121L66.9427 25.3781C65.3973 29.1266 61.5739 31.4109 57.0214 31.4109C49.3333 31.4109 45.8114 25.4207 45.8114 20.2944C45.8114 15.2533 48.9034 9.22044 56.5915 9.22044C64.7519 9.22044 67.4575 15.3386 67.4575 19.8635C67.4629 20.568 67.4346 21.2723 67.3726 21.974ZM60.5008 17.7946C60.3289 15.9411 58.9967 14.2189 56.5926 14.2189C54.3582 14.2189 53.0283 15.2085 52.5984 17.7946H60.5008ZM33.4435 31.0654H39.6699L47.444 9.52334H40.3153L36.5355 22.0604L32.6697 9.52225H25.5824L33.4435 31.0654ZM4.40975 31.0654H11.4535V15.3386H18.1555V31.0665H25.1558V9.52225H11.4535V8.18707C11.4535 6.72178 12.4842 5.81745 14.1167 5.81745H18.1544V0H12.9576C7.84565 0 4.40975 3.14601 4.40975 7.75514V9.52225H0.415527V15.3397H4.40975V31.0654Z"
         fill="white"
@@ -63,27 +59,12 @@ const FiverrLogo = () => (
   </svg>
 );
 
-const TestimonialCard = ({
-  testimonial,
-  isHovered,
-  onHover,
-  onLeave,
-}: TestimonialCardProps) => {
+const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
     <motion.div
       id={`testimonial-${testimonial.id}`}
-      className={`relative p-6 rounded-xl border transition-all duration-300 cursor-pointer ${
-        isHovered
-          ? "bg-[#090909] border-[#1C540E] shadow shadow-[#1C540E]"
-          : "bg-gray-900/40 border-[#1C540E]"
-      }`}
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
-      animate={{
-        opacity: isHovered ? 1 : 0.6,
-        scale: isHovered ? 1.02 : 1,
-      }}
-      transition={{ duration: 0.3 }}
+      className={`relative p-6 rounded-xl border border-[#1C540E]  bg-[#001605] transition-all duration-300 cursor-pointer 
+        `}
     >
       <div className="flex items-center justify-between mb-4 border-b border-[#1C540E] pb-4">
         <div className="flex items-center gap-3">
@@ -119,7 +100,6 @@ const TestimonialCard = ({
 
       <div className="flex justify-between items-center text-xs text-gray-500">
         <span>{testimonial.service}</span>
-        <span>{testimonial.date}</span>
       </div>
     </motion.div>
   );

@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import logo from "../../../public/favicon.svg";
 import ReuseableButton from "../Reuseable/ReuseableButton";
+
 export interface MorphingNavigationLink {
   id: string;
   label: string;
@@ -23,7 +24,7 @@ const MorphingNavigation: React.FC<{
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    const handleResize = () => setIsMobile(window.innerWidth < 1024); // 1024px breakpoint for mobile
     const handleScroll = () => {
       setIsSticky(window.scrollY >= 100);
       if (window.scrollY >= 100) setIsMenuOpen(false);
@@ -39,16 +40,18 @@ const MorphingNavigation: React.FC<{
   }, []);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
   const morphingNavbar = (
     <motion.header
       className={classNames(
-        "fixed top-0 left-0 right-0 z-50 bg-[rgba(0,15,6,0.32)]  transition-all",
-
+        "fixed top-0 left-0 right-0 backdrop-blur z-50 transition-all overflow-hidden",
         isSticky && "max-w-[1400px] mx-auto lg:rounded-xl md:mt-4"
       )}
       style={{
         boxShadow: isSticky ? "0 8px 32px 0 rgba(0,0,0,0.18)" : undefined,
         minHeight: 80,
+        background: "rgba(0, 15, 6, 0.32)",
+        opacity: 1,
       }}
     >
       <div
@@ -67,33 +70,48 @@ const MorphingNavigation: React.FC<{
             <Image src={logo} alt="logo" quality={100} />
           </div>
         </Link>
+
+        {!isMobile && (
+          <div className="flex-1 flex justify-center items space-x-8">
+            {links.map((link) => (
+              <Link key={link.id} href={link.href}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.8 }}
+                  className="text-xl text-white hover:text-primary"
+                >
+                  {link.label}
+                </motion.div>
+              </Link>
+            ))}
+          </div>
+        )}
+
         <div className="flex items-center gap-4">
+          <div className="flex justify-end bg-primary w-fit rounded-full  items-center">
+            {isMobile && (
+              <button
+                onClick={toggleMenu}
+                className="block lg:hidden bg-[rgba(0,15,6,0.9)] cursor-pointer"
+              >
+                <div className="flex flex-col items-center justify-center">
+                  <span className="w-5 h-0.5 bg-white mb-1" />
+                  <span className="w-5 h-0.5 bg-white mb-1" />
+                  <span className="w-5 h-0.5 bg-white" />
+                </div>
+              </button>
+            )}
+          </div>
           <div className="hidden lg:block">
             <Link href="https://www.fiverr.com/shopify_manir">
               <ReuseableButton title="GET A QUOTE" />
             </Link>
           </div>
-          <button
-            onClick={toggleMenu}
-            className="ml-2 flex items-center justify-center w-12 h-12 rounded-full bg-[#6ee42b] cursor-pointer hover:bg-[#42c822] transition-all duration-200"
-            aria-label="Open menu"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="mx-auto"
-            >
-              <rect x="5" y="7" width="14" height="2" rx="1" fill="#fff" />
-              <rect x="5" y="11" width="14" height="2" rx="1" fill="#fff" />
-              <rect x="5" y="15" width="14" height="2" rx="1" fill="#fff" />
-            </svg>
-          </button>
         </div>
       </div>
     </motion.header>
   );
+
   return (
     <>
       <AnimatePresence>
@@ -105,12 +123,7 @@ const MorphingNavigation: React.FC<{
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="
-        flex flex-col items-center justify-center
-        bg-gradient-to-br from-[#102616ee] to-[#193c24ee] 
-        rounded-3xl border-2 border-[#42c822] shadow-2xl
-        max-w-sm w-[90vw] px-8 py-10 relative
-      "
+              className="flex flex-col items-center justify-center bg-gradient-to-br from-[#102616ee] to-[#193c24ee] rounded-3xl border-2 border-[#42c822] shadow-2xl max-w-sm w-[90vw] px-8 py-10 relative"
               initial={{ opacity: 0, scale: 0.95, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 30 }}
@@ -120,7 +133,7 @@ const MorphingNavigation: React.FC<{
                 whileHover={{ scale: 1.05 }}
                 aria-label="Close Menu"
                 onClick={() => setIsMenuOpen(false)}
-                className="absolute top-5 right-5 text-white/70 hover:text-[#42c822]  cursor-pointer transition"
+                className="absolute top-5 right-5 text-white/70 hover:text-[#42c822] cursor-pointer transition"
               >
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                   <path
@@ -171,7 +184,7 @@ const MorphingNavigation: React.FC<{
 
       <motion.header
         ref={navRef}
-        className="fixed top-0  inset-x-0 z-50  "
+        className="fixed top-0 inset-x-0 z-50 overflow-hidden"
         animate={{
           borderRadius: isSticky && isMobile ? 9999 : isSticky ? 9999 : 0,
         }}
@@ -188,7 +201,7 @@ const MorphingNavigation: React.FC<{
       >
         <nav
           className={classNames(
-            "flex items-center w-full max-w-[1400px] mx-auto px-4 md:px-6 ",
+            "flex items-center w-full max-w-[1400px]  mx-auto px-4 md:px-6 ",
             {
               "justify-between": isMobile,
               "justify-center": !isMobile && !isSticky,
@@ -200,52 +213,24 @@ const MorphingNavigation: React.FC<{
               "mx-auto": isSticky,
             })}
           >
-            <div className=" flex  items-center justify-center cursor-pointer ">
-              {/* {isSticky
-                ? morphingNavbar : */}
-              {/* // <div className="w-[160px] h-[40px]">
-                  //   <Link href="/">
-                  //     <Image src={logo} alt="logo" quality={100} />
-                  //   </Link>
-                  // </div> */}
-              {morphingNavbar}
-              {/* } */}
-            </div>
+            {morphingNavbar}
           </div>
 
-          {isMobile &&
-            !isSticky &&
-            //   <button
-            //     onClick={toggleMenu}
-            //     className="block lg:hidden bg-[rgba(0,15,6,0.9)] cursor-pointer"
-            //   >
-            //     <div className="flex flex-col items-center justify-center">
-            //       <span className="w-5 h-0.5 bg-white mb-1" />
-            //       <span className="w-5 h-0.5 bg-white mb-1" />
-            //       <span className="w-5 h-0.5 bg-white" />
-            //     </div>
-            //   </button>
-            morphingNavbar}
-
-          {/* {!isMobile && !isSticky && (
-            <div className="flex-1 flex justify-center space-x-8">
-              {links.map((link) => (
-                <Link key={link.id} href={link.href}>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.8 }}
-                    className="text-xl hover:text-primary"
-                  >
-                    {link.label}
-                  </motion.div>
-                </Link>
-              ))}
-            </div>
+          {/* Mobile menu toggle for md or below */}
+          {/* {isMobile && !isSticky && (
+            <button
+              onClick={toggleMenu}
+              className="block lg:hidden bg-[rgba(0,15,6,0.9)] cursor-pointer"
+            >
+              <div className="flex flex-col items-center justify-center">
+                <span className="w-5 h-0.5 bg-white mb-1" />
+                <span className="w-5 h-0.5 bg-white mb-1" />
+                <span className="w-5 h-0.5 bg-white" />
+              </div>
+            </button>
           )} */}
 
-          {/* {!isMobile && !isSticky && (
-            <ReuseableButton title=" GET A QUOTE"></ReuseableButton>
-          )} */}
+          {/* Desktop links */}
         </nav>
       </motion.header>
     </>

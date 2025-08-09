@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import img from "../../../public/images/about.png";
-import bg from "../../../public/images/bg.svg";
+import bg from "../../../public/images/bg.png";
 import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
 
 const FiverrSVG = () => (
@@ -51,12 +51,6 @@ export default function AboutUsSection() {
     <section
       id="about"
       className="w-full my-32 md:my-40 flex justify-center items-center "
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
       <motion.div
         ref={ref}
@@ -72,7 +66,17 @@ export default function AboutUsSection() {
         }}
         className="max-w-[1400px] w-full mx-auto "
       >
-        <div className="relative bg-[rgba(0,15,6,0.2)] backdrop-blur-lg rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col md:flex-row items-center gap-12 md:gap-10 shadow-xl overflow-hidden">
+        <div
+          style={{
+            backgroundImage: `url(${bg})`,
+            background: "linear-gradient(0deg, #062608 0%, #052508 100%)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            zIndex: 1,
+          }}
+          className="relative  rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col md:flex-row items-center gap-12 md:gap-10 shadow-xl overflow-hidden"
+        >
           <motion.div
             className="flex-1  max-w-[480px]"
             initial={{ opacity: 0, x: -80 }}
