@@ -21,8 +21,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <Image
           src={image}
           alt={subtitle!}
-          layout="fill"
-          className="rounded-[40px]  object-fill "
+          className="rounded-[40px]  object-fill h-full w-full"
         />
       </div>
 

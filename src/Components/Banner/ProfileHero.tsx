@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import CountUp from "react-countup";
 import ReuseableButton from "../Reuseable/ReuseableButton";
@@ -52,8 +53,52 @@ const ProfileHero = () => {
         </div>
       </div>
 
-      <div className="flex items-center mb-8">
-        <div className="flex space-x-1">
+      <div className="flex flex-wrap items-center mb-8">
+        <div className="relative flex items-center w-28">
+          <div className="absolute flex space-x-[-10px]">
+            <Image
+              src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="User 1"
+              width={4000}
+              height={4000}
+              quality={100}
+              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+            />
+            <Image
+              src="https://media.istockphoto.com/id/1783956687/photo/portrait-of-young-asian-business-woman-in-outdoors.jpg?s=612x612&w=0&k=20&c=pnVh6u7qLOgOByi8KULFcTqPBiYjVpkMICW2CurG12Y="
+              alt="User 2"
+              width={4000}
+              height={4000}
+              quality={100}
+              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+            />
+            <Image
+              src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2"
+              alt="User 3"
+              width={4000}
+              height={4000}
+              quality={100}
+              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+            />
+            <Image
+              src="https://img.freepik.com/free-photo/portrait-young-handsome-man-with-beard-smiling_176420-12037.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="User 5"
+              width={4000}
+              height={4000}
+              quality={100}
+              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+            />
+            <Image
+              src="https://w7.pngwing.com/pngs/876/337/png-transparent-fiverr-freelancer-logo-business-online-marketplace-fiverr-text-service-grass-thumbnail.png"
+              alt="User 5"
+              width={4000}
+              height={4000}
+              quality={100}
+              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+            />
+          </div>
+        </div>
+        <div className="flex ml-32   space-x-1 ">
           {[...Array(5)].map((_, i) => (
             <svg
               key={i}
@@ -70,13 +115,15 @@ const ProfileHero = () => {
             </svg>
           ))}
         </div>
-        <span className="ml-3 text-white/60  text-sm md:text-base">
+        <span className="ml-3 text-white/60 text-sm md:text-base">
           - Click to see 383 Review
         </span>
       </div>
-      <Link href="https://www.fiverr.com/shopify_manir">
-        <ReuseableButton title="Fiverr Profile" showArrow={true} />
-      </Link>
+      <div className="md:mt-12">
+        <Link href="https://www.fiverr.com/shopify_manir">
+          <ReuseableButton title="Fiverr Profile" showArrow={true} />
+        </Link>
+      </div>
     </section>
   );
 };

@@ -5,8 +5,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { GrLinkedin } from "react-icons/gr";
 import logo from "../../../public/favicon.svg";
-import ReuseableButton from "../Reuseable/ReuseableButton";
 
 export interface MorphingNavigationLink {
   id: string;
@@ -44,8 +44,7 @@ const MorphingNavigation: React.FC<{
   const morphingNavbar = (
     <motion.header
       className={classNames(
-        "fixed top-0 left-0 right-0 backdrop-blur z-50 transition-all overflow-hidden",
-        isSticky && "max-w-[1400px] mx-auto lg:rounded-xl md:mt-4"
+        "fixed top-0 left-0 right-0 backdrop-blur z-50 transition-all overflow-hidden"
       )}
       style={{
         boxShadow: isSticky ? "0 8px 32px 0 rgba(0,0,0,0.18)" : undefined,
@@ -102,10 +101,29 @@ const MorphingNavigation: React.FC<{
               </button>
             )}
           </div>
-          <div className="hidden lg:block">
-            <Link href="https://www.fiverr.com/shopify_manir">
-              <ReuseableButton title="GET A QUOTE" />
+          <div className="flex items-center gap-4">
+            <Link
+              href="https://www.fiverr.com/shopify_manir"
+              className="flex items-center gap-4  rounded-full  "
+            >
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.8 }}
+                className="w-9 h-9"
+              >
+                <GrLinkedin className="w-full text-primary  bg-white rounded-lg h-full" />
+              </motion.div>
             </Link>
+
+            <div className="hidden lg:block">
+              <Link href="https://www.fiverr.com/shopify_manir">
+                <button
+                  className={`flex items-center border border-[#42c822] w-full md:w-fit cursor-pointer rounded-2xl px-6 py-2 text-[#42c822] font-medium text-lg justify-center text-center gap-4  hover:bg-gradient-to-r from-[#42c822] to-[#2A512B] hover:text-white`}
+                >
+                  GET A QUOTE
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

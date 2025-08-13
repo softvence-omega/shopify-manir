@@ -5,19 +5,45 @@ import Marquee from "react-fast-marquee";
 import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
 import ProfileCard from "./ProfileCard";
 import ProfileHero from "./ProfileHero";
-
+export const Info = [
+  {
+    title: "Shopify ",
+    href: "https://www.fiverr.com/shopify_manir/build-shopify-store-or-dropshipping-ecommerce-store?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=1&seller_online=true&imp_id=6fb6a01e-5ddb-462b-806c-85f5fc99c090",
+  },
+  {
+    title: "Product Research",
+    href: "https://www.fiverr.com/shopify_manir/build-rebuild-website-development-as-full-stack-web-developer-frontend-backen?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=9&seller_online=true&imp_id=1bdd3f7e-936e-47f2-bc15-5593b8ef2ec6",
+  },
+  // {
+  //   title: "Logo Branding",
+  //   href: "https://www.fiverr.com/shopify_manir/design-or-redesign-wix-website-or-wix-ecommerce-website?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=6&seller_online=true&imp_id=75e3340b-e5ee-4680-bbc3-0cb6a0f0d961",
+  // },
+  {
+    title: "SEO",
+    href: "https://www.fiverr.com/shopify_manir/design-shopify-product-landing-page-with-shogun-gempages-or-pagefly?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=10&seller_online=true&imp_id=449ee102-2264-4ebd-8b89-a4b07e8299b5",
+  },
+  {
+    title: "Store Build",
+    href: "https://www.fiverr.com/shopify_manir/build-rebuild-website-development-as-full-stack-web-developer-frontend-backen?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=9&seller_online=true&imp_id=1bdd3f7e-936e-47f2-bc15-5593b8ef2ec6",
+  },
+  {
+    title: "WordPress theme development",
+    href: "https://www.fiverr.com/shopify_manir/build-wordpress-website-development-redesign-wordpress-using-elementor-pro?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=2&seller_online=true&imp_id=14bb7893-9cf4-4c5e-bdfe-323ee7c275e2",
+  },
+  {
+    title: "Web Design",
+    href: "https://www.fiverr.com/shopify_manir/design-redesign-or-develop-webflow-website-webflow-expert?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=3&seller_online=true&imp_id=e4cf8f1e-138e-4fd9-8065-612261fbf74f",
+  },
+  {
+    title: "Wix",
+    href: "https://www.fiverr.com/shopify_manir/design-or-redesign-wix-website-or-wix-ecommerce-website?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=6&seller_online=true&imp_id=75e3340b-e5ee-4680-bbc3-0cb6a0f0d961",
+  },
+  {
+    title: "Webflow",
+    href: "https://www.fiverr.com/shopify_manir/design-redesign-or-develop-webflow-website-webflow-expert?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=3&seller_online=true&imp_id=e4cf8f1e-138e-4fd9-8065-612261fbf74f",
+  },
+];
 const Banner = () => {
-  const Info = [
-    "Shopify Theme",
-    "Product Research",
-    "Logo Branding",
-    "SEO",
-    "Store Build",
-    "WordPress theme development",
-    "Web Design",
-    "Wix",
-    "Webflow",
-  ];
   return (
     <section
       id="home"
@@ -58,21 +84,21 @@ const Banner = () => {
         </div>
       </div>
       <section
-        style={{
-          background:
-            "linear-gradient(360deg, rgba(0, 15, 6, 0.15) 0%, rgba(66, 200, 34, 0.65) 100%)",
-        }}
-        className="w-full mt-20 md:mt-40 py-8 px-4"
+        // style={{
+        //   background:
+        //     "linear-gradient(360deg, rgba(0, 15, 6, 0.8) 0%, rgba(66, 200, 34, 0.65) 100%)",
+        // }}
+        className="w-full bg-gradient-to-br from-[#36633F] to-primary backdrop-blur-xl mt-20 md:mt-40 py-8 px-4"
       >
         <Marquee
           speed={80}
           gradient={false}
           className="text-white text-lg lg:text-3xl font-bold tracking-wide"
         >
-          {Info.map((text, index) => (
-            <Link key={index} href="https://www.fiverr.com/shopify_manir">
-              <span className="mx-12 text-xl lg:text-4xl font-semibold uppercase cursor-pointer hover:text-[#42C822] transition-all duration-300 flex justify-center items-center gap-4 ">
-                {text}
+          {Info.map((item) => (
+            <Link key={item.href} href={item.href}>
+              <span className="mx-12 text-xl lg:text-4xl font-semibold uppercase cursor-pointer hover:text-primary transition-all duration-300 flex justify-center items-center gap-4 ">
+                {item.title}
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +112,7 @@ const Banner = () => {
                     fill="#42C822"
                   />
                 </svg>
-              </span>{" "}
+              </span>
             </Link>
           ))}
         </Marquee>

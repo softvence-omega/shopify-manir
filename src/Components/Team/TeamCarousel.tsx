@@ -390,7 +390,7 @@ const TeamCarousel: React.FC<TeamCarouselProps> = ({
           className="text-center mt-10"
         >
           <h2
-            className="text-4xl font-bold mb-3 relative inline-block"
+            className="text-4xl font-bold mb-3 relative  uppercase inline-block"
             style={{ color: infoTextColor }}
           >
             {members[currentIndex].name}
@@ -399,10 +399,7 @@ const TeamCarousel: React.FC<TeamCarouselProps> = ({
               style={{ background: infoTextColor }}
             />
           </h2>
-          <p
-            className="text-xl font-medium opacity-80 uppercase tracking-wider"
-            style={{ color: infoTextColor }}
-          >
+          <p className="text-xl font-medium  text-white uppercase tracking-wider mt-2">
             {members[currentIndex].role}
           </p>
           {members[currentIndex].bio && (

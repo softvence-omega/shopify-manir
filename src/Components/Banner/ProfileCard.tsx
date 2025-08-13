@@ -99,11 +99,11 @@ const ProfileCard: React.FC = () => {
       </div>
 
       <div className="absolute left-0 bottom-0 w-full h-28 pointer-events-none">
-        <span className="absolute left-4 bottom-6 rotate-[-22deg] bg-[#1DBF73] text-white text-xs  px-3 py-1 rounded-lg shadow-lg  md:text-base z-10">
+        <span className="absolute left-4 bottom-7 rotate-[-22deg] bg-[#1DBF73] text-white text-xs  px-3 py-1 rounded-lg shadow-lg  md:text-base z-10">
           Top Rated Seller
         </span>
-        <span className="absolute left-32 bottom-2  bg-[#9747FF] text-white text-xs  px-3 py-1 rounded-lg shadow-lg  md:text-base z-10">
-          Vetted Pro
+        <span className="absolute left-36 bottom-2  bg-[#9747FF] text-white text-xs  px-3 py-1 rounded-lg shadow-lg  md:text-base z-10">
+          Certified
         </span>
         <span className="absolute left-40 md:left-56 top-10 md:top-auto md:bottom-5 rotate-[25deg] bg-[#479DFF] text-white text-xs  px-3 py-1 rounded-lg shadow-lg  md:text-base z-10">
           Professional

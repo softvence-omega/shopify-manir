@@ -3,20 +3,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../public/favicon.svg";
+import { Info } from "../Banner/Banner";
 import ReuseableButton from "../Reuseable/ReuseableButton";
 import Wrapper from "../Reuseable/Wrapper";
-
-const footerLinks = [
-  "Shopify Theme",
-  "Product Research",
-  "Logo Branding",
-  "SEO",
-  "Store Build",
-  "WordPress theme development",
-  "Web Design",
-  "Wix",
-  "Webflow",
-];
 
 export default function Footer() {
   return (
@@ -100,8 +89,8 @@ export default function Footer() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {footerLinks.map((link, index) => (
-              <Link key={index} href="https://www.fiverr.com/shopify_manir">
+            {Info.map((item, index) => (
+              <Link key={item.href} href={item.href}>
                 <motion.p
                   className="text-gray-300 hover:text-green-400 transition-colors cursor-pointer duration-200 font-medium"
                   initial={{ opacity: 0, y: 20 }}
@@ -110,7 +99,7 @@ export default function Footer() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.8 }}
                 >
-                  {link}
+                  {item.title}
                 </motion.p>
               </Link>
             ))}

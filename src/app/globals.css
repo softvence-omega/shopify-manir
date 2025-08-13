@@ -17,6 +17,7 @@ body {
   --font-grotesk: "Space Grotesk", sans-serif;
   --font-urbanist: "Urbanist", sans-serif;
   --color-primary: #42c822;
+  --color-background: #001605;
 }
 * {
   user-select: none;

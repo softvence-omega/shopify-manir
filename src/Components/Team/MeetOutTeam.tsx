@@ -1,9 +1,13 @@
 import { StaticImageData } from "next/image";
+import img9 from "../../../public/images/team/abdullah.png";
 import img2 from "../../../public/images/team/hasan.png";
 import img4 from "../../../public/images/team/iftekhar.png";
 import img5 from "../../../public/images/team/imran.png";
 import img3 from "../../../public/images/team/lulfur.png";
 import img1 from "../../../public/images/team/manir.png";
+import img7 from "../../../public/images/team/nazifa.jpg";
+import img8 from "../../../public/images/team/sazidul.jpg";
+import img6 from "../../../public/images/team/shaima.jpg";
 import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
 import TeamCarousel from "./TeamCarousel";
 
@@ -21,19 +25,6 @@ const teamMembers: TeamMember[] = [
     image: img1,
   },
   {
-    id: "1",
-    name: "Hasan Ahmed",
-    role: "Google Ads Expert",
-    image: img2,
-  },
-  {
-    id: "2",
-    name: "Lulfur Anik",
-    role: "Shopify Expert",
-    image: img3,
-  },
-
-  {
     id: "4",
     name: "Iftakhar Hossain Akash",
     role: "Project Manager",
@@ -44,6 +35,43 @@ const teamMembers: TeamMember[] = [
     name: "Imran Hossain",
     role: "MERN Stack Developer",
     image: img5,
+  },
+  {
+    id: "1",
+    name: "Hasan Ahmed",
+    role: "Google Ads Expert",
+    image: img2,
+  },
+  {
+    id: "2",
+    name: "Lutfur Anik",
+    role: "Shopify Expert",
+    image: img3,
+  },
+
+  {
+    id: "6",
+    name: "Shaima Afrin",
+    role: "SquareSpace Expert",
+    image: img6,
+  },
+  {
+    id: "7",
+    name: "Nazifa Sultana Bithe",
+    role: "Wix Expert",
+    image: img7,
+  },
+  {
+    id: "8",
+    name: "Sazidul Islam",
+    role: "Mobile App Developer",
+    image: img8,
+  },
+  {
+    id: "9",
+    name: "MD Abdullah",
+    role: "Wordpress Expert",
+    image: img9,
   },
 ];
 
