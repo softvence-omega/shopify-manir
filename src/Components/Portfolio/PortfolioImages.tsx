@@ -60,8 +60,8 @@ function PortfolioImage({
         ref={containerRef}
         className={`relative cursor-pointer group w-full h-full flex flex-col justify-between rounded-xl overflow-hidden shadow-lg ${className}`}
         style={{ background: "#101c13", position: "relative" }}
-        onMouseEnter={() => setIsHovered(true)} // Trigger scroll effect on hover
-        onMouseLeave={() => setIsHovered(false)} // Reset scroll when hover ends
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         {/* Image container */}
         <div className="w-full h-full overflow-hidden relative">
@@ -69,9 +69,9 @@ function PortfolioImage({
             animate={controls}
             style={{
               width: "100%",
-              height: "auto", // Ensure the image retains its natural height
+              height: "auto",
               position: "relative",
-              overflow: "hidden", // Prevent image from overflowing
+              overflow: "hidden",
             }}
           >
             <Image
@@ -80,7 +80,7 @@ function PortfolioImage({
               alt={title || "Portfolio"}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover object-top"
-              onLoadingComplete={handleImageLoad} // Set image height after loading
+              onLoad={handleImageLoad}
             />
           </motion.div>
         </div>

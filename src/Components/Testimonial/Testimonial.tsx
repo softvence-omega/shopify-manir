@@ -128,7 +128,7 @@ export default function TestimonialsSection() {
           href="https://www.fiverr.com/shopify_manir#reviews"
           className="w-full mx-auto md:grid place-items-center"
         >
-          <ReuseableButton title="View Now !" showArrow />
+          <ReuseableButton title="View More !" showArrow />
         </Link>
       </motion.div>
     </section>

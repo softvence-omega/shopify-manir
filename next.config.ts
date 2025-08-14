@@ -2,7 +2,60 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['fiverr-res.cloudinary.com', 'freepngimg.com', 'm.media-amazon.com', 'c8.alamy.com', 'img.pikbest.com', 'media.istockphoto.com', 'thumbs.dreamstime.com', 'images.unsplash.com', 'images.pexels.com', 'w7.pngwing.com', 'img.freepik.com', 'plus.unsplash.com', "images.rawpixel.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'fiverr-res.cloudinary.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'freepngimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'c8.alamy.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.pikbest.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.istockphoto.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'thumbs.dreamstime.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'w7.pngwing.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.freepik.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'plus.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.rawpixel.com',
+      },
+    ],
   },
 };
 
