@@ -75,7 +75,7 @@ export default function AboutUsSection() {
             backgroundRepeat: "no-repeat",
             zIndex: 1,
           }}
-          className="relative  rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col md:flex-row items-center gap-12 md:gap-10 shadow-xl overflow-hidden"
+          className="relative  rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col xl:flex-row items-center gap-12 md:gap-10 shadow-xl overflow-hidden"
         >
           <motion.div
             className="flex-1  max-w-[480px]"
@@ -116,7 +116,7 @@ export default function AboutUsSection() {
           </motion.div>
 
           <div className="relative flex-1 w-full flex justify-center">
-            <div className="relative w-full h-[300px] md:h-[550px]   md:bg-[rgba(0,15,6,0.5)] rounded-[32px]  overflow-hidden md:shadow-xl flex items-center justify-center">
+            <div className="relative w-full h-[300px] md:h-[550px]   xl:bg-[rgba(0,15,6,0.5)] rounded-[32px]  overflow-hidden xl:shadow-xl flex items-center justify-center">
               <div
                 className="md:absolute hidden md:block inset-0 pointer-events-none"
                 style={{

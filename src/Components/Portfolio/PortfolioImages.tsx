@@ -55,7 +55,7 @@ function PortfolioImage({
   }, [isHovered, scrollRatio, controls, scrollDistance, imageHeight]);
 
   return (
-    <Link href={href}>
+    <Link target="_blank" href={href}>
       <div
         ref={containerRef}
         className={`relative cursor-pointer group w-full h-full flex flex-col justify-between rounded-xl overflow-hidden shadow-lg ${className}`}
