@@ -20,7 +20,7 @@ const ProfileHero = () => {
       <div className="flex flex-wrap items-center justify-between mb-8 border-b border-[#2A512B] pb-6 gap-10 md:gap-0">
         <div className="flex gap-2 items-center">
           <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none w-20 text-center">
-            <CountUp end={5} duration={8} suffix="+" />
+            <CountUp end={3} duration={8} suffix="+" />
           </span>
           <span className="text-xs md:text-sm  mt-1">
             Years
@@ -31,7 +31,7 @@ const ProfileHero = () => {
         <div className="border-r border-[#2A512B] h-8 mx-3 md:mx-5" />
         <div className="flex gap-2 items-center">
           <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none w-20 text-center">
-            <CountUp end={155} duration={6} suffix="+" />
+            <CountUp end={55} duration={6} suffix="+" />
           </span>
           <span className="text-xs md:text-sm  mt-1">
             Project
@@ -52,75 +52,79 @@ const ProfileHero = () => {
           </span>
         </div>
       </div>
+      <div className=" flex  flex-col lg:flex-col lg:items-start xl:flex-row xl:items-center  md:flex-row gap-2  justify-between md:justify-start lg:gap-4 xl:gap-8 md:gap-8 md:items-center md:mt-6 mt-12">
+        <div className="flex flex-col md:flex-row  ">
+          <div className="relative flex    w-52 h-14">
+            <div className="absolute flex space-x-[-10px]">
+              <Image
+                src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="User 1"
+                width={4000}
+                height={4000}
+                quality={100}
+                className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+              />
+              <Image
+                src="https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMjgtMzY2LXRvbmctMDhfMS5qcGc.jpg"
+                alt="User 5"
+                width={4000}
+                height={4000}
+                quality={100}
+                className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+              />
 
-      <div className="flex flex-wrap items-center mb-8">
-        <div className="relative flex items-center w-28">
-          <div className="absolute flex space-x-[-10px]">
-            <Image
-              src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80"
-              alt="User 1"
-              width={4000}
-              height={4000}
-              quality={100}
-              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
-            />
-            <Image
-              src="https://media.istockphoto.com/id/1783956687/photo/portrait-of-young-asian-business-woman-in-outdoors.jpg?s=612x612&w=0&k=20&c=pnVh6u7qLOgOByi8KULFcTqPBiYjVpkMICW2CurG12Y="
-              alt="User 2"
-              width={4000}
-              height={4000}
-              quality={100}
-              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
-            />
-            <Image
-              src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2"
-              alt="User 3"
-              width={4000}
-              height={4000}
-              quality={100}
-              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
-            />
-            <Image
-              src="https://img.freepik.com/free-photo/portrait-young-handsome-man-with-beard-smiling_176420-12037.jpg?semt=ais_hybrid&w=740&q=80"
-              alt="User 5"
-              width={4000}
-              height={4000}
-              quality={100}
-              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
-            />
-            <Image
-              src="https://w7.pngwing.com/pngs/876/337/png-transparent-fiverr-freelancer-logo-business-online-marketplace-fiverr-text-service-grass-thumbnail.png"
-              alt="User 5"
-              width={4000}
-              height={4000}
-              quality={100}
-              className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
-            />
+              <Image
+                src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2"
+                alt="User 3"
+                width={4000}
+                height={4000}
+                quality={100}
+                className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+              />
+              <Image
+                src="https://img.freepik.com/free-photo/portrait-young-handsome-man-with-beard-smiling_176420-12037.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="User 5"
+                width={4000}
+                height={4000}
+                quality={100}
+                className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+              />
+              <Image
+                src="https://media.istockphoto.com/id/1783956687/photo/portrait-of-young-asian-business-woman-in-outdoors.jpg?s=612x612&w=0&k=20&c=pnVh6u7qLOgOByi8KULFcTqPBiYjVpkMICW2CurG12Y="
+                alt="User 2"
+                width={4000}
+                height={4000}
+                quality={100}
+                className="w-12 h-12 object-top object-cover rounded-full border-2 border-primary"
+              />
+            </div>
           </div>
         </div>
-        <div className="flex ml-32   space-x-1 ">
-          {[...Array(5)].map((_, i) => (
-            <svg
-              key={i}
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="19"
-              viewBox="0 0 20 19"
-              fill="none"
-            >
-              <path
-                d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
-                fill="#FFD900"
-              />
-            </svg>
-          ))}
+        <div className="flex   justify-start   items-start ">
+          <div className="flex    space-x-1 ">
+            {[...Array(5)].map((_, i) => (
+              <svg
+                key={i}
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="19"
+                viewBox="0 0 20 19"
+                fill="none"
+              >
+                <path
+                  d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+                  fill="#FFD900"
+                />
+              </svg>
+            ))}
+          </div>
+          <span className="md:ml-3  text-white/60 text-sm md:text-base">
+            - Click to see 1.7k Review
+          </span>
         </div>
-        <span className="ml-3 text-white/60 text-sm md:text-base">
-          - Click to see 383 Review
-        </span>
       </div>
-      <div className="md:mt-12">
-        <Link href="https://www.fiverr.com/shopify_manir">
+      <div className=" mt-12">
+        <Link target="_blank" href="https://www.fiverr.com/shopify_manir">
           <ReuseableButton title="Fiverr Profile" showArrow={true} />
         </Link>
       </div>

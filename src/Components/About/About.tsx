@@ -75,7 +75,7 @@ export default function AboutUsSection() {
             backgroundRepeat: "no-repeat",
             zIndex: 1,
           }}
-          className="relative  rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col md:flex-row items-center gap-12 md:gap-10 shadow-xl overflow-hidden"
+          className="relative  rounded-[48px] border border-[#1a4e27] px-4 py-10 md:p-16 flex flex-col xl:flex-row items-center gap-12 md:gap-10 shadow-xl overflow-hidden"
         >
           <motion.div
             className="flex-1  max-w-[480px]"
@@ -109,16 +109,20 @@ export default function AboutUsSection() {
               We offer a comprehensive range of services, including website
               development, WordPress expertise, Wix website, and Shopify store
               design.
-              <Link href="#" className="text-[#42C822] underline ml-2">
+              <Link
+                target="_blank"
+                href="https://www.fiverr.com/shopify_manir"
+                className="text-[#42C822] underline ml-2"
+              >
                 Learn More
               </Link>
             </p>
           </motion.div>
 
           <div className="relative flex-1 w-full flex justify-center">
-            <div className="relative w-full h-[550px]   bg-[rgba(0,15,6,0.5)] rounded-[32px]  overflow-hidden shadow-xl flex items-center justify-center">
+            <div className="relative w-full h-[300px] md:h-[550px]   xl:bg-[rgba(0,15,6,0.5)] rounded-[32px]  overflow-hidden xl:shadow-xl flex items-center justify-center">
               <div
-                className="absolute inset-0 pointer-events-none"
+                className="md:absolute hidden md:block inset-0 pointer-events-none"
                 style={{
                   background:
                     "linear-gradient(0deg, rgba(7,34,8,0.5) 0%, rgba(7,34,8,0.5) 100%)",
@@ -132,7 +136,7 @@ export default function AboutUsSection() {
                 src={img}
                 alt="manir-about"
                 fill
-                className="object-cover rounded-[32px] h-full w-full"
+                className="xl:object-cover object-contain  rounded-[32px] h-full w-full"
                 quality={100}
               />
 

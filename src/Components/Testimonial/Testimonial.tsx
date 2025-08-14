@@ -124,6 +124,7 @@ export default function TestimonialsSection() {
         className="grid place-items-center mt-10"
       >
         <Link
+          target="_blank"
           href="https://www.fiverr.com/shopify_manir#reviews"
           className="w-full mx-auto md:grid place-items-center"
         >

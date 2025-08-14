@@ -31,16 +31,10 @@ const teamMembers: TeamMember[] = [
     image: img4,
   },
   {
-    id: "5",
-    name: "Imran Hossain",
-    role: "MERN Stack Developer",
-    image: img5,
-  },
-  {
-    id: "1",
-    name: "Hasan Ahmed",
-    role: "Google Ads Expert",
-    image: img2,
+    id: "8",
+    name: "Sazidul Islam",
+    role: "Mobile App Developer",
+    image: img8,
   },
   {
     id: "2",
@@ -50,28 +44,35 @@ const teamMembers: TeamMember[] = [
   },
 
   {
-    id: "6",
-    name: "Shaima Afrin",
-    role: "SquareSpace Expert",
-    image: img6,
-  },
-  {
     id: "7",
     name: "Nazifa Sultana Bithe",
     role: "Wix Expert",
     image: img7,
   },
   {
-    id: "8",
-    name: "Sazidul Islam",
-    role: "Mobile App Developer",
-    image: img8,
+    id: "1",
+    name: "Hasan Ahmed",
+    role: "Google Ads Expert",
+    image: img2,
   },
   {
     id: "9",
     name: "MD Abdullah",
     role: "Wordpress Expert",
     image: img9,
+  },
+
+  {
+    id: "6",
+    name: "Shaima Afrin",
+    role: "SquareSpace Expert",
+    image: img6,
+  },
+  {
+    id: "5",
+    name: "Imran Hossain",
+    role: "MERN Stack Developer",
+    image: img5,
   },
 ];
 

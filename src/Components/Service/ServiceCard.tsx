@@ -43,7 +43,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </svg>
         <span className="ml-2">{rating} / 5</span>
       </div>
-      <Link href={href}>
+      <Link target="_blank" href={href}>
         <ReuseableButton title="View Now !" showArrow />
       </Link>
     </div>

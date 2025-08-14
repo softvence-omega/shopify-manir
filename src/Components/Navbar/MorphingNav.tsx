@@ -62,6 +62,7 @@ const MorphingNavigation: React.FC<{
         style={{ minHeight: 80 }}
       >
         <Link
+          target="_blank"
           href="https://www.fiverr.com/shopify_manir"
           className="flex items-center gap-2"
         >
@@ -87,24 +88,11 @@ const MorphingNavigation: React.FC<{
         )}
 
         <div className="flex items-center gap-4">
-          <div className="flex justify-end bg-primary w-fit rounded-full  items-center">
-            {isMobile && (
-              <button
-                onClick={toggleMenu}
-                className="block lg:hidden bg-[rgba(0,15,6,0.9)] cursor-pointer"
-              >
-                <div className="flex flex-col items-center justify-center">
-                  <span className="w-5 h-0.5 bg-white mb-1" />
-                  <span className="w-5 h-0.5 bg-white mb-1" />
-                  <span className="w-5 h-0.5 bg-white" />
-                </div>
-              </button>
-            )}
-          </div>
           <div className="flex items-center gap-4">
             <Link
-              href="https://www.fiverr.com/shopify_manir"
-              className="flex items-center gap-4  rounded-full  "
+              target="_blank"
+              href="https://www.linkedin.com/in/maniruzzaman-718a87279"
+              className="lg:flex hidden  items-center gap-4  rounded-full  "
             >
               <motion.div
                 whileHover={{ scale: 1.1 }}
@@ -114,9 +102,23 @@ const MorphingNavigation: React.FC<{
                 <GrLinkedin className="w-full text-primary  bg-white rounded-lg h-full" />
               </motion.div>
             </Link>
+            <div className="flex justify-end bg-primary w-fit rounded-full  items-center">
+              {isMobile && (
+                <button
+                  onClick={toggleMenu}
+                  className="block lg:hidden bg-[rgba(0,15,6,0.9)] cursor-pointer"
+                >
+                  <div className="flex flex-col items-center justify-center">
+                    <span className="w-5 h-0.5 bg-white mb-1" />
+                    <span className="w-5 h-0.5 bg-white mb-1" />
+                    <span className="w-5 h-0.5 bg-white" />
+                  </div>
+                </button>
+              )}
+            </div>
 
             <div className="hidden lg:block">
-              <Link href="https://www.fiverr.com/shopify_manir">
+              <Link target="_blank" href="https://www.fiverr.com/shopify_manir">
                 <button
                   className={`flex items-center border border-[#42c822] w-full md:w-fit cursor-pointer rounded-2xl px-6 py-2 text-[#42c822] font-medium text-lg justify-center text-center gap-4  hover:bg-gradient-to-r from-[#42c822] to-[#2A512B] hover:text-white`}
                 >
@@ -165,6 +167,7 @@ const MorphingNavigation: React.FC<{
 
               <div className="w-[160px] h-[48px] mb-12">
                 <Link
+                  target="_blank"
                   href="https://www.fiverr.com/shopify_manir"
                   className="block w-full h-full"
                 >
@@ -194,6 +197,18 @@ const MorphingNavigation: React.FC<{
                     </motion.div>
                   </Link>
                 ))}
+                <Link
+                  target="_blank"
+                  href={"https://www.linkedin.com/in/maniruzzaman-718a87279"}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.08, color: "#42c822" }}
+                    whileTap={{ scale: 0.96 }}
+                    className="block py-2 px-4 rounded-lg text-lg font-medium text-white/90 text-center tracking-wide transition-colors duration-200 hover:bg-[linear-gradient(90deg,#42c82222,#193c24_70%)] uppercase"
+                  >
+                    Linkedin
+                  </motion.div>
+                </Link>
               </nav>
             </motion.div>
           </motion.div>
