@@ -109,7 +109,11 @@ export default function AboutUsSection() {
               We offer a comprehensive range of services, including website
               development, WordPress expertise, Wix website, and Shopify store
               design.
-              <Link href="#" className="text-[#42C822] underline ml-2">
+              <Link
+                target="_blank"
+                href="https://www.fiverr.com/shopify_manir"
+                className="text-[#42C822] underline ml-2"
+              >
                 Learn More
               </Link>
             </p>
