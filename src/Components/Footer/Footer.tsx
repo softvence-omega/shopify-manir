@@ -41,7 +41,7 @@ export default function Footer() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link href="https://www.fiverr.com/shopify_manir">
+              <Link target="_blank" href="https://www.fiverr.com/shopify_manir">
                 <ReuseableButton
                   title=" Visit Our Fiverr Profile to Collaborate"
                   showArrow
@@ -90,9 +90,9 @@ export default function Footer() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             {Info.map((item, index) => (
-              <Link key={item.href} href={item.href}>
+              <Link target="_blank" key={item.href} href={item.href}>
                 <motion.p
-                  className="text-gray-300 hover:text-green-400 transition-colors cursor-pointer duration-200 font-medium"
+                  className="uppercase text-gray-300 hover:text-green-400 transition-colors cursor-pointer duration-200 font-medium"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.9 + index * 0.05 }}

@@ -116,9 +116,9 @@ export default function AboutUsSection() {
           </motion.div>
 
           <div className="relative flex-1 w-full flex justify-center">
-            <div className="relative w-full h-[550px]   bg-[rgba(0,15,6,0.5)] rounded-[32px]  overflow-hidden shadow-xl flex items-center justify-center">
+            <div className="relative w-full h-[300px] md:h-[550px]   md:bg-[rgba(0,15,6,0.5)] rounded-[32px]  overflow-hidden md:shadow-xl flex items-center justify-center">
               <div
-                className="absolute inset-0 pointer-events-none"
+                className="md:absolute hidden md:block inset-0 pointer-events-none"
                 style={{
                   background:
                     "linear-gradient(0deg, rgba(7,34,8,0.5) 0%, rgba(7,34,8,0.5) 100%)",
@@ -132,7 +132,7 @@ export default function AboutUsSection() {
                 src={img}
                 alt="manir-about"
                 fill
-                className="object-cover rounded-[32px] h-full w-full"
+                className="xl:object-cover object-contain  rounded-[32px] h-full w-full"
                 quality={100}
               />
 

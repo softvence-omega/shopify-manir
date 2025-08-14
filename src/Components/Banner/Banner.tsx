@@ -27,7 +27,7 @@ export const Info = [
     href: "https://www.fiverr.com/shopify_manir/build-rebuild-website-development-as-full-stack-web-developer-frontend-backen?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=9&seller_online=true&imp_id=1bdd3f7e-936e-47f2-bc15-5593b8ef2ec6",
   },
   {
-    title: "WordPress theme development",
+    title: "WordPress",
     href: "https://www.fiverr.com/shopify_manir/build-wordpress-website-development-redesign-wordpress-using-elementor-pro?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=2&seller_online=true&imp_id=14bb7893-9cf4-4c5e-bdfe-323ee7c275e2",
   },
   {
@@ -96,7 +96,7 @@ const Banner = () => {
           className="text-white text-lg lg:text-3xl font-bold tracking-wide"
         >
           {Info.map((item) => (
-            <Link key={item.href} href={item.href}>
+            <Link target="_blank" key={item.href} href={item.href}>
               <span className="mx-12 text-xl lg:text-4xl font-semibold uppercase cursor-pointer hover:text-primary transition-all duration-300 flex justify-center items-center gap-4 ">
                 {item.title}
 
