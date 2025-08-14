@@ -7,6 +7,10 @@ import ProfileCard from "./ProfileCard";
 import ProfileHero from "./ProfileHero";
 export const Info = [
   {
+    title: "Full Stack Development ",
+    href: "https://www.fiverr.com/shopify_manir/build-rebuild-website-development-as-full-stack-web-developer-frontend-backen?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=9&seller_online=true&imp_id=1bdd3f7e-936e-47f2-bc15-5593b8ef2ec6",
+  },
+  {
     title: "Shopify ",
     href: "https://www.fiverr.com/shopify_manir/build-shopify-store-or-dropshipping-ecommerce-store?context_referrer=seller_page&ref_ctx_id=7c6d315293094955a4ce5feea5013b5b&pckg_id=1&pos=1&seller_online=true&imp_id=6fb6a01e-5ddb-462b-806c-85f5fc99c090",
   },
