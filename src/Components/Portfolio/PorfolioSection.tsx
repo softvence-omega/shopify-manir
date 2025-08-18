@@ -1,3 +1,4 @@
+import Link from "next/link";
 import img3 from "../../../public/images/portfolio/grime.png";
 import img7 from "../../../public/images/portfolio/kcab.png";
 import img6 from "../../../public/images/portfolio/neith.png";
@@ -5,6 +6,7 @@ import img1 from "../../../public/images/portfolio/olive.png";
 import img2 from "../../../public/images/portfolio/p2.png";
 import img from "../../../public/images/portfolio/tarantula.png";
 import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
+import ReuseableButton from "../Reuseable/ReuseableButton";
 import PortfolioImage from "./PortfolioImages";
 
 export default function PortfolioSection() {
@@ -56,6 +58,13 @@ export default function PortfolioSection() {
           className="md:col-span-1 md:row-span-1"
         />
       </div>
+      <Link
+        target="_blank"
+        href="https://www.fiverr.com/shopify_manir#Services"
+        className="w-full mt-12 mx-auto grid place-items-center"
+      >
+        <ReuseableButton title="View More !" showArrow />
+      </Link>
     </section>
   );
 }

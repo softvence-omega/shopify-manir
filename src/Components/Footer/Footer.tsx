@@ -19,7 +19,7 @@ export default function Footer() {
             transition={{ duration: 0.8 }}
           >
             <motion.h2
-              className="text-4xl md:text-5xl font-bold mb-2"
+              className="text-2xl md:text-5xl font-bold mb-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -27,7 +27,7 @@ export default function Footer() {
               Interested to collaborate?
             </motion.h2>
             <motion.p
-              className="text-3xl md:text-5xl font-bold mb-8"
+              className="text-2xl md:text-5xl font-bold mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -43,6 +43,7 @@ export default function Footer() {
             >
               <Link target="_blank" href="https://www.fiverr.com/shopify_manir">
                 <ReuseableButton
+                  className="text-sm md:text-base "
                   title=" Visit Our Fiverr Profile to Collaborate"
                   showArrow
                 />
@@ -90,7 +91,7 @@ export default function Footer() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             {Info.map((item, index) => (
-              <Link target="_blank" key={item.href} href={item.href}>
+              <Link target="_blank" key={index} href={item.href}>
                 <motion.p
                   className="uppercase text-gray-300 hover:text-green-400 transition-colors cursor-pointer duration-200 font-medium"
                   initial={{ opacity: 0, y: 20 }}

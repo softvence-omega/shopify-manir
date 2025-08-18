@@ -1,18 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { testimonialsData } from "./Testimonial";
 
-interface ITestimonialsData {
-  id: number;
-  clientName: string;
-  avatar: string;
-  rating: number;
-  maxRating: number;
-  review: string;
-  service: string;
-}
-interface TestimonialCardProps {
-  testimonial: ITestimonialsData;
-}
 const StarIcon = ({ filled = true }: { filled?: boolean }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -59,18 +48,22 @@ const FiverrLogo = () => (
   </svg>
 );
 
-const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
+const TestimonialCard = ({
+  testimonial,
+}: {
+  testimonial: (typeof testimonialsData)[0];
+}) => {
   return (
     <motion.div
       id={`testimonial-${testimonial.id}`}
-      className={`relative p-6 rounded-xl border border-[#1C540E]  bg-[#001605] transition-all duration-300 cursor-pointer 
+      className={`relative p-6 rounded-xl border border-[#1C540E]  bg-[#001605] transition-all duration-300 
         `}
     >
       <div className="flex items-center justify-between mb-4 border-b border-[#1C540E] pb-4">
         <div className="flex items-center gap-3">
           <Image
-            height={480}
-            width={480}
+            height={4800}
+            width={4800}
             quality={100}
             src={testimonial.avatar}
             alt={testimonial.clientName}

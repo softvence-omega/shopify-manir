@@ -13,7 +13,6 @@ export interface TeamMember {
   image: StaticImageData;
   bio?: string;
 }
-
 export interface TeamCarouselProps {
   members: TeamMember[];
   title?: string;

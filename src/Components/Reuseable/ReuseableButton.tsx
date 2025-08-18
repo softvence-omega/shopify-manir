@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
@@ -36,7 +37,10 @@ export default function ReuseableButton({
 }: ReusableButtonProps) {
   return (
     <motion.button
-      className={` ${className} flex items-center border border-[#42c822] w-full md:w-fit cursor-pointer rounded-2xl px-6 py-3 text-[#42c822] font-medium text-lg justify-center text-center gap-4  hover:bg-gradient-to-r from-[#42c822] to-[#2A512B] hover:text-white`}
+      className={cn(
+        "flex items-center border border-[#42c822] w-full md:w-fit cursor-pointer rounded-2xl px-6 py-3 text-[#42c822] font-medium text-lg justify-center text-center gap-4  hover:bg-gradient-to-r from-[#42c822] to-[#2A512B] hover:text-white",
+        className
+      )}
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}

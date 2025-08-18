@@ -4,10 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
 import ReuseableButton from "../Reuseable/ReuseableButton";
-import ScrollStack, { ScrollStackItem } from "./ScrollStackItem";
 import TestimonialCard from "./TestimonialCard";
 
-const testimonialsData = [
+export const testimonialsData = [
   {
     id: 1,
     clientName: "dakijsjoannou",
@@ -52,17 +51,17 @@ const testimonialsData = [
       "Working with Manir was a great experience. He was very attentive and available to meet and discuss, we had multiple web calls that were extremely helpful. Rather than texting/email, Manir prefers to discuss over a live chat which for me is far more meaningful and effective. I would highly recommend Manir! Great guy and very good at what he does. Thanks, Brad Stone",
     service: "Webflow",
   },
-  {
-    id: 5,
-    clientName: "paul_van_oers",
-    avatar:
-      "https://media.istockphoto.com/id/1135090585/vector/letter-p-logo-icon-design.jpg?s=612x612&w=0&k=20&c=lzfzb__61ufKGy-mvrHDriaazQW9iMGj5HK52PQTH9Y=",
-    rating: 5.0,
-    maxRating: 5,
-    review:
-      "I was genuinely surprised and extremely satisfied with the work Manir delivered. Communication was excellent and very fast. Manir managed to transform my website from a dull one-pager into a stunning, professional site with five clear, well-structured pages, and he did it remarkably quickly. The only minor point of criticism is that the website went live before it was fully finalized (some texts and contact details weren’t correct yet). However, this was resolved swiftly, and overall I’m incredibly happy with the result. Manir and I are already discussing revamping a second website, which shows how much I value his work. I highly recommend him to anyone looking for a reliable and skilled developer!",
-    service: "WordPress",
-  },
+  // {
+  //   id: 5,
+  //   clientName: "paul_van_oers",
+  //   avatar:
+  //     "https://media.istockphoto.com/id/1135090585/vector/letter-p-logo-icon-design.jpg?s=612x612&w=0&k=20&c=lzfzb__61ufKGy-mvrHDriaazQW9iMGj5HK52PQTH9Y=",
+  //   rating: 5.0,
+  //   maxRating: 5,
+  //   review:
+  //     "I was genuinely surprised and extremely satisfied with the work Manir delivered. Communication was excellent and very fast. Manir managed to transform my website from a dull one-pager into a stunning, professional site with five clear, well-structured pages, and he did it remarkably quickly. The only minor point of criticism is that the website went live before it was fully finalized (some texts and contact details weren’t correct yet). However, this was resolved swiftly, and overall I’m incredibly happy with the result. Manir and I are already discussing revamping a second website, which shows how much I value his work. I highly recommend him to anyone looking for a reliable and skilled developer!",
+  //   service: "WordPress",
+  // },
 ];
 
 export default function TestimonialsSection() {
@@ -105,16 +104,14 @@ export default function TestimonialsSection() {
       </motion.div>
 
       <div
-        className="  h-[600px] md:h-[700px]  
-"
+      // className="  h-[1000px] md:h-[700px] "
       >
-        <ScrollStack>
-          {testimonialsData.map((testimonial) => (
-            <ScrollStackItem key={testimonial.id}>
-              <TestimonialCard testimonial={testimonial} />
-            </ScrollStackItem>
+        {/* <ScrollStack cards={testimonialsData}></ScrollStack> */}
+        <div className="flex flex-col gap-8  ">
+          {testimonialsData.map((items, idx) => (
+            <TestimonialCard key={idx} testimonial={items}></TestimonialCard>
           ))}
-        </ScrollStack>
+        </div>
       </div>
 
       <motion.div
@@ -125,10 +122,10 @@ export default function TestimonialsSection() {
       >
         <Link
           target="_blank"
-          href="https://www.fiverr.com/shopify_manir#reviews"
+          href="https://www.fiverr.com/shopify_manir#reviews_header_as_seller"
           className="w-full mx-auto md:grid place-items-center"
         >
-          <ReuseableButton title="View Now !" showArrow />
+          <ReuseableButton title="View More !" showArrow />
         </Link>
       </motion.div>
     </section>

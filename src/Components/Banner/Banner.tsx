@@ -99,8 +99,8 @@ const Banner = () => {
           gradient={false}
           className="text-white text-lg lg:text-3xl font-bold tracking-wide"
         >
-          {Info.map((item) => (
-            <Link target="_blank" key={item.href} href={item.href}>
+          {Info.map((item, idx) => (
+            <Link target="_blank" key={idx} href={item.href}>
               <span className="mx-12 text-xl lg:text-4xl font-semibold uppercase cursor-pointer hover:text-primary transition-all duration-300 flex justify-center items-center gap-4 ">
                 {item.title}
 

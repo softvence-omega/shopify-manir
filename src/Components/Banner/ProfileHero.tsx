@@ -17,35 +17,35 @@ const ProfileHero = () => {
         Certified Full Stack and CMS expert
       </h2>
 
-      <div className="flex flex-wrap items-center justify-between mb-8 border-b border-[#2A512B] pb-6 gap-10 md:gap-0">
-        <div className="flex gap-2 items-center">
+      <div className="flex flex-wrap items-center justify-between mb-8 border-b border-[#2A512B] pb-6 md:gap-0">
+        <div className="flex flex-col md:flex-row justify-center  gap-2 items-center">
           <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none w-20 text-center">
             <CountUp end={3} duration={8} suffix="+" />
           </span>
-          <span className="text-xs md:text-sm  mt-1">
+          <span className="text-xs md:text-sm text-center  md:text-left  md:mt-1">
             Years
             <br />
             Experience
           </span>
         </div>
         <div className="border-r border-[#2A512B] h-8 mx-3 md:mx-5" />
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-col md:flex-row justify-center gap-2 items-center">
           <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none w-20 text-center">
             <CountUp end={55} duration={6} suffix="+" />
           </span>
-          <span className="text-xs md:text-sm  mt-1">
+          <span className="text-xs md:text-sm   text-center  md:text-left   md:mt-1 mt-0">
             Project
             <br />
             Completed
           </span>
         </div>
         <div className="border-r border-[#2A512B] h-8 mx-3 sm:mx-5" />
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-col md:flex-row justify-center gap-2 items-center">
           <span className="text-[#42c822] font-bold text-3xl md:text-4xl leading-none w-20 text-center">
             <CountUp end={10} duration={8} suffix="+" />
           </span>
 
-          <span className="text-xs sm:text-sm  mt-1">
+          <span className="text-xs sm:text-sm  text-center  md:text-left   md:mt-1 mt-0">
             Top
             <br />
             Class Skills

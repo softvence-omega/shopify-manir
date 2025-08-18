@@ -19,9 +19,9 @@ body {
   --color-primary: #42c822;
   --color-background: #001605;
 }
-* {
+/* * {
   user-select: none;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 10px;
