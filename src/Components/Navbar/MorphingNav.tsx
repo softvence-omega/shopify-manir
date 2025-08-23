@@ -91,7 +91,7 @@ const MorphingNavigation: React.FC<{
           <div className="flex items-center gap-4">
             <Link
               target="_blank"
-              href="https://www.linkedin.com/in/maniruzzaman-718a87279"
+              href="https://www.linkedin.com/in/maniruzzamanmunna"
               className="lg:flex hidden  items-center gap-4  rounded-full  "
             >
               <motion.div

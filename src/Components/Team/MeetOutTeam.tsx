@@ -1,13 +1,3 @@
-import { StaticImageData } from "next/image";
-import img9 from "../../../public/images/team/abdullah.png";
-import img2 from "../../../public/images/team/hasan.png";
-import img4 from "../../../public/images/team/iftekhar.png";
-import img5 from "../../../public/images/team/imran.png";
-import img3 from "../../../public/images/team/lulfur.png";
-import img1 from "../../../public/images/team/manir.png";
-import img7 from "../../../public/images/team/nazifa.jpg";
-import img8 from "../../../public/images/team/sazidul.jpg";
-import img6 from "../../../public/images/team/shaima.jpg";
 import DashedRotatedTitle from "../Reuseable/DashedRotatedTitle";
 import TeamCarousel from "./TeamCarousel";
 
@@ -15,64 +5,73 @@ type TeamMember = {
   id: string;
   name: string;
   role: string;
-  image: StaticImageData;
+  image: string;
 };
 const teamMembers: TeamMember[] = [
   {
     id: "3",
     name: "Manir Uzzaman",
     role: "CEO at Shopify Manir",
-    image: img1,
+    image:
+      "https://res.cloudinary.com/drwixw2na/image/upload/v1755528150/manir_ne3vo8.png",
   },
   {
     id: "4",
     name: "Iftakhar Hossain Akash",
     role: "Project Manager",
-    image: img4,
+    image:
+      "https://res.cloudinary.com/drwixw2na/image/upload/v1755528148/iftekhar_okjoqg.png",
   },
   {
     id: "8",
     name: "Sazidul Islam",
     role: "Mobile App Developer",
-    image: img8,
+    image:
+      "https://res.cloudinary.com/drwixw2na/image/upload/v1755528148/sazid_pldpmn.jpg",
   },
   {
     id: "2",
     name: "Lutfur Anik",
     role: "Shopify Expert",
-    image: img3,
+    image:
+      "https://res.cloudinary.com/drwixw2na/image/upload/v1755528148/lulfur_v79hk3.png",
   },
 
   {
     id: "7",
     name: "Nazifa Sultana Bithe",
     role: "Wix Expert",
-    image: img7,
+    image:
+      "https://res.cloudinary.com/drwixw2na/image/upload/v1755528147/nazifa_c386io.jpg",
   },
   {
     id: "1",
     name: "Hasan Ahmed",
     role: "Google Ads Expert",
-    image: img2,
+    image:
+      "https://res.cloudinary.com/drwixw2na/image/upload/v1755528149/hasan_stkvgd.png",
   },
   {
     id: "9",
     name: "MD Abdullah",
     role: "Wordpress Expert",
-    image: img9,
+    image:
+      "https://res.cloudinary.com/drwixw2na/image/upload/v1755528149/abdullah_iohbcn.png",
   },
 
   {
     id: "6",
     name: "Shaima Afrin",
     role: "SquareSpace Expert",
-    image: img6,
+    image:
+      "https://res.cloudinary.com/drwixw2na/image/upload/v1755528147/shaima_tms7gd.jpg",
   },
   {
     id: "5",
     name: "Imran Hossain",
     role: "MERN Stack Developer",
-    image: img5,
+    image:
+      "https://res.cloudinary.com/drwixw2na/image/upload/v1755528149/imran_l8yqhl.png",
   },
 ];
 

@@ -43,7 +43,7 @@ export default function Footer() {
             >
               <Link target="_blank" href="https://www.fiverr.com/shopify_manir">
                 <ReuseableButton
-                  className="text-sm md:text-base "
+                  className="text-sm md:text-lg "
                   title=" Visit Our Fiverr Profile to Collaborate"
                   showArrow
                 />
